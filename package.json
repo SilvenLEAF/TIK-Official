@@ -1,0 +1,29 @@
+{
+  "name": "tik-official",
+  "version": "1.0.0",
+  "description": "TIK is a community of coders for sharing ideas, learning together, helping each other, showcasing projects, fixing bugs, doing group projects, having hackathons and contests, algorithms and many many many more...",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvenLEAF/TIK-Official.git"
+  },
+  "keywords": [
+    "TIK"
+  ],
+  "author": "SilvenLEAF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilvenLEAF/TIK-Official/issues"
+  },
+  "homepage": "https://github.com/SilvenLEAF/TIK-Official#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
+  }
+}
