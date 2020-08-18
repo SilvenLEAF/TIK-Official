@@ -1,9 +1,10 @@
 const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
 
 
 
-const auth = (req, res, next) =>{
+const auth = async (req, res, next) =>{
   try {
     const token = req.header('x-auth-token');
 
@@ -15,7 +16,18 @@ const auth = (req, res, next) =>{
 
     if(!verified) return res.status(401).json({ msg: `Token verification failed, authorization denied.` });
 
-    req.user = verified.id;
+    const findUser = await User.findById(verified.id);
+
+    req.user = {
+      id: findUser._id,
+      userName: findUser.userName,
+      location: findUser.location,
+      developer: findUser.developer,
+      skills: findUser.skills,
+      about: findUser.about,
+      role: findUser.role
+    };
+
     next();
   } catch (err) {
     next(err,req,res)
