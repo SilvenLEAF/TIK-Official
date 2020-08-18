@@ -85,7 +85,7 @@ module.exports.update_profile = async (req, res, next)=>{
       const salt = await bcrypt.genSalt();
       const hashedPassword = await bcrypt.hash(password, salt);
 
-      await User.findByIdAndUpdate(req.user, {
+      await User.findByIdAndUpdate(req.user.id, {
         ...req.body,
         password: hashedPassword
       });
@@ -126,7 +126,7 @@ module.exports.update_profile = async (req, res, next)=>{
 /* ----------------------------------------
 .             DELETE PROFILE
 ---------------------------------------- */
-module.exports.delete_profile = async (req, res, next)=>{
+module.exports.delete_account = async (req, res, next)=>{
   const { userId } = req.body;
 
   const deletedUser = await User.findByIdAndDelete(userId);

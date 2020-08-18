@@ -133,7 +133,7 @@ module.exports.verify_token = async (req, res, next)=>{
 
     if(!verified) return res.json(false);
 
-    // does the user really on our database ?
+    // is the user really on our database ?
     const user = await User.findById(verified.id);
 
     if(!user) return res.json(false);
