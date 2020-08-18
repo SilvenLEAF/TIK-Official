@@ -40,7 +40,7 @@ app.get('*', (req, res)=>{
 
 // ----------errors handling
 app.use((err, req, res, next)=>{
-  console.log(err.message);
+  console.log(err);
   return res.status(500).json({ error: err.message, msg: `Server Error!` });
 })
 

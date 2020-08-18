@@ -22,7 +22,7 @@ POST http://localhost:5000/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "user@gmail.com",
+  "email": "mod@gmail.com",
   "password": "ffffff"  
 }
 
@@ -39,5 +39,5 @@ Content-Type: application/json
 #             VERIFY  TOKEN
 ##########################################
 POST http://localhost:5000/verifyToken HTTP/1.1
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2I0MjNlZjA1MzBiMTI5MGRiZGY5YSIsImlhdCI6MTU5NzcxOTEzMH0.x5arfQlDd8qrTWgrKaIM6cLUOwC5m9jzX4oFx-wSgxQ
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2I0MWI1MGQ2ZjU5MWYyNGM5Njc4NiIsImlhdCI6MTU5NzcyNTcyMX0.yifVnPNxuHOrECHCaSmNCgl4eqExSHHJS1qHjyU1Nfg
 
