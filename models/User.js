@@ -30,6 +30,10 @@ const UserSchema = new mongoose.Schema({
   skills: {
     type: String,
     default: `no skills yet`
+  },
+  role: {
+    type: String,
+    default: `user`
   }
 })
 

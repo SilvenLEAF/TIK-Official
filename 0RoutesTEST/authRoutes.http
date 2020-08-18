@@ -5,10 +5,10 @@ POST http://localhost:5000/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "foo@gmail.com",
+  "email": "user@gmail.com",
   "password": "ffffff",
   "passwordCheck": "ffffff",
-  "userName": "Mr. FOO"
+  "userName": "Mr. USER"
 }
 
 
@@ -22,7 +22,7 @@ POST http://localhost:5000/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "foo@gmail.com",
+  "email": "user@gmail.com",
   "password": "ffffff"  
 }
 
@@ -39,5 +39,5 @@ Content-Type: application/json
 #             VERIFY  TOKEN
 ##########################################
 POST http://localhost:5000/verifyToken HTTP/1.1
-x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2IxY2Q0NTE5MmY5MDlmNGQwNTFlMCIsImlhdCI6MTU5NzcxMjQxM30.jioNqrZEH0UqJQUKKKklegdI5X1663ZJprifesAL270
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2I0MjNlZjA1MzBiMTI5MGRiZGY5YSIsImlhdCI6MTU5NzcxOTEzMH0.x5arfQlDd8qrTWgrKaIM6cLUOwC5m9jzX4oFx-wSgxQ
 

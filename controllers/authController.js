@@ -45,7 +45,8 @@ module.exports.signup =  async (req, res, next)=>{
       location: savedUser.location,
       developer: savedUser.developer,
       skills: savedUser.skills,
-      about: savedUser.about
+      about: savedUser.about,
+      role: savedUser.role
     });
 
   } catch (err) {
@@ -97,7 +98,8 @@ module.exports.login = async (req, res, next)=>{
       location: user.location,
       developer: user.developer,
       skills: user.skills,
-      about: user.about
+      about: user.about,
+      role: user.role
     }
   })
   

@@ -1,0 +1,16 @@
+##########################################
+#             GET LOGGED IN USER
+##########################################
+GET http://localhost:5000/users/ HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2I0MjNlZjA1MzBiMTI5MGRiZGY5YSIsImlhdCI6MTU5NzcxOTEzMH0.x5arfQlDd8qrTWgrKaIM6cLUOwC5m9jzX4oFx-wSgxQ
+
+
+
+
+
+
+##########################################
+#             GET ALL USERS
+##########################################
+GET http://localhost:5000/users/all HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmM2I0MjNlZjA1MzBiMTI5MGRiZGY5YSIsImlhdCI6MTU5NzcxOTEzMH0.x5arfQlDd8qrTWgrKaIM6cLUOwC5m9jzX4oFx-wSgxQ

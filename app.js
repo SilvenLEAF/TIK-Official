@@ -29,7 +29,8 @@ mongoose.connect(process.env.MONGODB_STRING, {
 .             middlewares
 --------------------------------- */
 // ----------routes handling
-app.use(require('./routes/authRoutes'))
+app.use(require('./routes/authRoutes'));
+app.use('/users', require('./routes/userRoutes'));
 /* The catch-all handler. */
 app.get('*', (req, res)=>{
   res.sendFile(path.json(__dirname, 'client/build/index.html'));
