@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <nav id="footer" className="nav-wrapper">
+    <nav id="myFooter" className="nav-wrapper">
       <div className="container">
         <Link to="/">
           <div>
@@ -16,7 +16,7 @@ function Footer() {
           </div>
         </Link>
 
-        <Link to="/">
+        <Link to="/solver">
           <div>
             <div className="myFooterIcons fa fa-medkit"></div>
             <div className="myFooterNameTag">
@@ -26,14 +26,14 @@ function Footer() {
         </Link>
 
 
-        <Link to="/">
+        <Link to="/entertainment">
           <div>
             <div id="myGamepadIcon" className="myFooterIcons fa fa-gamepad"></div>          
           </div>
         </Link>
 
 
-        <Link to="/">
+        <Link to="/spies">
           <div>
             <div className="myFooterIcons fa fa-user-secret"></div>
             <div className="myFooterNameTag">
@@ -43,7 +43,7 @@ function Footer() {
         </Link>
 
 
-        <Link to="/">
+        <Link to="/team">
           <div>
             <div className="myFooterIcons fa fa-users"></div>
             <div className="myFooterNameTag">
