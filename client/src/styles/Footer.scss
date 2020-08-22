@@ -1,0 +1,49 @@
+body {
+  background-color: rgba($color: #f00, $alpha: 0.2);
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+    div{
+      display: block;
+
+      #myGamepadIcon{
+        font-size: 300%;
+        padding: 10px;
+        border-radius: 50%;
+        
+        position: relative;
+        top: -35px;
+
+        border: 20px solid purple;
+        background-color: black;
+        color: red;
+      }
+
+      .myFooterIcons{
+        margin: 10px;
+        font-size: 200%;
+        margin-bottom: 0;
+      }
+  
+      .myFooterNameTag{      
+        margin-top: 0;
+        text-align: center;
+        font-size: 120%;
+        color: #fff;
+  
+        position: relative;
+        top: -17px;
+  
+      }
+
+    }
+    
+  }
+}

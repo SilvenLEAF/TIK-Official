@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
+
+:root{
+  --navAndFooterBG: purple;
+}
+
+
 body{  
   margin: 0;
   padding: 0;
@@ -9,6 +15,20 @@ body{
   font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
 }
+
+
+
+
+/* ------------------------------------
+.           Navbar and Footer
+------------------------------------ */
+nav.nav-wrapper {
+  background-color: var(--navAndFooterBG);
+}
+
+
+
+
 
 /* ------------------------------------
 .              HAMBURGER

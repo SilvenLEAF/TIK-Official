@@ -9,7 +9,7 @@ import SignedOutLinks from './SignedOutLinks'
 function Navbar() {
   const link = 5 ? <SignedInLinks /> : <SignedOutLinks />;
   return (
-    <nav className="nav-wrapper purple">
+    <nav className="nav-wrapper">
       <div className="container">
         <Link to="/" className="brand-logo">TIK ORG</Link>
         <div className="sidenav-trigger hide-on-large-only" data-target="mobileNav">
