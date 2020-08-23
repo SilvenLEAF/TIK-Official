@@ -57,8 +57,8 @@ nav.nav-wrapper {
   cursor: pointer;
 }
 .sidenav-trigger > div {
-  width: 45px;    
-  height: 5px;
+  width: 30px;    
+  height: 3px;
   margin: 7px;
   background-color: #fff;
   border-radius: 30px;
