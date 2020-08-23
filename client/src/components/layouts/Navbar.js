@@ -7,7 +7,7 @@ import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 
 function Navbar() {
-  const link = 5 ? <SignedInLinks /> : <SignedOutLinks />;
+  const link = 0 ? <SignedInLinks /> : <SignedOutLinks />;
   return (
     <nav id="myNavbar" className="nav-wrapper">
       <div className="container">

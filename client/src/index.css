@@ -6,9 +6,12 @@
   --navAndFooterBG: purple;
 }
 
-
+html{
+  height: 100%;
+}
 body{  
-  margin: 0;
+  height: 100%;
+  margin: 0;  
   padding: 0;
   box-sizing: border-box;
   user-select: none;
@@ -25,6 +28,21 @@ body{
 nav.nav-wrapper {
   background-color: var(--navAndFooterBG);
 }
+
+
+
+
+
+/* ------------------------------------
+.       WRAPPER AND FOOTER
+------------------------------------ */
+#wrapper {
+  /* margin-bottom: 56px; */
+  height: calc(100vh - 56px);
+  overflow: auto;  
+}
+
+
 
 
 

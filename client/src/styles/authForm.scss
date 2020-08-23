@@ -1,0 +1,70 @@
+
+.authFormHolder .authMainBox{
+  margin: 50px auto;
+  
+  padding: 20px;
+  width: 300px; 
+
+  border-radius: 12px;
+
+  font-family: sans-serif;
+  font-weight: 300;  
+
+  background-color: #ccc;
+
+  /* ---------------------------------
+  .         OAUTH BUTTONS
+  --------------------------------- */
+  // .oauthBtnGoogle {
+  //   background-color: orangered;
+  // }
+  
+  .oauthBtnFacebook {
+    background-color: #395693;
+  }
+  
+  // .oauthBtnGithub {
+  //   background-color: black;
+  // }
+  
+
+  /* ---------------------------------
+  .      OAUTH BUTTONS GENERAL
+  --------------------------------- */
+  a{
+    margin: 0px auto;
+    margin-bottom: 15px;
+    display: block;
+    width: 90%;
+    padding: 10px 20px;        
+    border-radius: 12px;
+    
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    
+    // icons
+    i{
+      padding-right: 10px;
+      font-size: 150%;
+      position: relative;
+      top: 3px;
+      left: -3px;
+    }
+  }
+
+  // Sign In header
+  h5{
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  // information info para
+  p{
+    text-align: center;
+    font-size: 90%;
+  }
+}
+
+
