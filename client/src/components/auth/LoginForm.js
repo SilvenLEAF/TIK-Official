@@ -13,22 +13,22 @@ function LoginForm() {
   
   return (
     <>
-      <div className="container authFormHolder">        
-        <div className="authMainBox">
+      <div className="container myAuthFormHolder">        
+        <div className="myAuthMainBox">
           <h5>Log In</h5>
-          <a href="/" className="oauthBtnGoogle" className="red darken-3">
+          <a href="/" className="myOauthBtnGoogle" className="red darken-3">
             <i className="fa fa-google"></i>
             <span>Continue with Google</span>
           </a>
 
 
-          <a href="/" className="oauthBtnFacebook" className="">
+          <a href="/" className="myOauthBtnFacebook" className="">
             <i className="fa fa-facebook"></i>
             <span>Continue with Facebook</span>
           </a>
 
 
-          <a href="/" className="oauthBtnGithub" className="black">
+          <a href="/" className="myOauthBtnGithub" className="black">
             <i className="fa fa-github"></i>
             <span>Continue with Github</span>
           </a>

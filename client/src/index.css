@@ -36,8 +36,7 @@ nav.nav-wrapper {
 /* ------------------------------------
 .       WRAPPER AND FOOTER
 ------------------------------------ */
-#wrapper {
-  /* margin-bottom: 56px; */
+#wrapper {  
   height: calc(100vh - 56px);
   overflow: auto;  
 }

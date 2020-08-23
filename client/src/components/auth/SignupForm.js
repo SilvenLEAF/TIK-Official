@@ -13,22 +13,22 @@ function SignupForm() {
   
   return (
     <>
-      <div className="container authFormHolder">        
-        <div className="authMainBox">
+      <div className="container myAuthFormHolder">        
+        <div className="myAuthMainBox">
           <h5>Sign Up</h5>
-          <a href="/" className="red darken-3 oauthBtnGoogle">
+          <a href="/" className="red darken-3 myOauthBtnGoogle">
             <i className="fa fa-google"></i>
             <span>Continue with Google</span>
           </a>
 
 
-          <a href="/" className="oauthBtnFacebook">
+          <a href="/" className="myOauthBtnFacebook">
             <i className="fa fa-facebook"></i>
             <span>Continue with Facebook</span>
           </a>
 
 
-          <a href="/" className="black oauthBtnGithub">
+          <a href="/" className="black myOauthBtnGithub">
             <i className="fa fa-github"></i>
             <span>Continue with Github</span>
           </a>
