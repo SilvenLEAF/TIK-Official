@@ -34,7 +34,7 @@ function SignupForm() {
           </a>
 
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, earum blanditiis. Excepturi eaque autem similique, quod, quasi sit doloribus iure dolorum ea mollitia a rerum?
+            Your information is used to allow you to securely sign in. T.I.K keeps certain data for security, support and other special purposes. <span className="blue-text">See how we manage your data.</span>
           </p>
 
 
