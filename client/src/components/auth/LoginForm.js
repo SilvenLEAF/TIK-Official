@@ -16,19 +16,19 @@ function LoginForm() {
       <div className="container myAuthFormHolder">        
         <div className="myAuthMainBox">
           <h5>Log In</h5>
-          <a href="/" className="red darken-3 myOauthBtnGoogle">
+          <a href="http://localhost:5000/auth/google" className="red darken-3 myOauthBtnGoogle">
             <i className="fa fa-google"></i>
             <span>Continue with Google</span>
           </a>
 
 
-          <a href="/" className="myOauthBtnFacebook">
+          <a href="http://localhost:5000/auth/facebook" className="myOauthBtnFacebook">
             <i className="fa fa-facebook"></i>
             <span>Continue with Facebook</span>
           </a>
 
 
-          <a href="/" className="black myOauthBtnGithub">
+          <a href="http://localhost:5000/auth/github" className="black myOauthBtnGithub">
             <i className="fa fa-github"></i>
             <span>Continue with Github</span>
           </a>

@@ -1,17 +1,46 @@
 const mongoose = require('mongoose');
 
-// creating UserSchema
-const UserSchema = new mongoose.Schema({
+/* --------------------------
+.         SUB SCHEMAS
+-------------------------- */
+const GoogleSchema = new mongoose.Schema({
+  googleId: {
+    type: String,
+  },
+  userName: String,
   email: { 
-    type: String,
-    required: true,
-    unique: true
+    type: String, 
+  }, 
+  image: String,
+})
+
+
+
+
+const GithubSchema = new mongoose.Schema({
+  githubId: {
+    type: String,   
   },
-  password: {
-    type: String,
-    required: true,
-    minlength: 6
-  },
+  userName: String,
+  email: { 
+    type: String,   
+  }, 
+  image: String,
+})
+
+
+
+
+
+
+
+
+/* --------------------------
+.         USER SCHEMA
+-------------------------- */
+const UserSchema = new mongoose.Schema({  
+  google: GoogleSchema,
+  github: GithubSchema,
   userName: {
     type: String
   },

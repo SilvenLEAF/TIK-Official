@@ -22,10 +22,14 @@
   },
   "homepage": "https://github.com/SilvenLEAF/TIK-Official#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.0",
+    "cookie-session": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.0"
+    "mongoose": "^5.10.0",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
