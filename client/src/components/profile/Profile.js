@@ -12,7 +12,7 @@ function Profile({ userData }) {
   const profileImage = userData.google.image || userData.github.image;
   const history = useHistory();
 
-  if(!userData.role) return history.push('/login')
+  
   return (
     <div id="myProfileContainer" className="container">      
       <div id="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>
