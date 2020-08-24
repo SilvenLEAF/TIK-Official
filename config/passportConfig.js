@@ -45,6 +45,7 @@ passport.use( new GoogleStrategy(
       } else {
         User.create({ 
           userName: profile.displayName,
+          profileImage: profile.photos[0].value,
           'google.googleId': profile.id,
           'google.userName': profile.displayName,
           'google.email': profile.emails[0].value,          
@@ -83,6 +84,7 @@ passport.use( new GithubStrategy(
       } else {
         User.create({ 
           userName: profile.displayName,
+          profileImage: profile.photos[0].value,
           'github.githubId': profile.id,
           'github.userName': profile.displayName,
           'github.email': profile.emails[0].value,          

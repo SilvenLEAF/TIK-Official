@@ -60,6 +60,7 @@ const UserSchema = new mongoose.Schema({
   userName: {
     type: String
   },
+  profileImage: String,
   location: {
     type: String,
     default: `Earth`
