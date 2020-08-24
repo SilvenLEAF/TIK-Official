@@ -9,7 +9,7 @@ function Profile({ userData }) {
     M.AutoInit();
   }, [])
   
-  const profileImage = userData.google.image || userData.github.image;
+  const profileImage = userData.profileImage;
   const history = useHistory();
 
   
