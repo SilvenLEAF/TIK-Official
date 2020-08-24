@@ -42,18 +42,6 @@ app.use(require('./routes/oauthRoutes'));
 app.use('/users', require('./routes/userRoutes'));
 
 
-
-
-// TESTING PROFILE ROUTE
-app.get('/profile', (req, res)=>{
-  if(req.user){
-    res.send(req.user);
-  } else {
-    res.redirect('/login')
-  }
-})
-
-
 /* The catch-all handler. */
 app.get('*', (req, res)=>{
   res.sendFile(path.join(__dirname, 'client/build/index.html'));

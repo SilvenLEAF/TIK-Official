@@ -96,3 +96,46 @@ passport.use( new GithubStrategy(
 
   }
 ))
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------
+.             FACEBOOK STRATEGY
+---------------------------------------- */
+passport.use( new FacebookStrategy(
+  {
+    clientID: oauthKeys.FACEBOOK.clientID,
+    clientSecret: oauthKeys.FACEBOOK.clientSecret,
+    callbackURL: '/auth/facebook/callback'
+  },
+  (accessToken, refreshToken, profile, done)=>{
+    console.log(chalk.red(JSON.stringify(profile)));
+    User.findOne({ 'facebook.facebookId': profile.id }).then((existingUser)=>{
+      if(existingUser){
+        return done(null, existingUser)
+      } else {
+        User.create({ 
+          userName: profile.displayName,
+          'facebook.facebookId': profile.id,
+          'facebook.userName': profile.displayName,
+          'facebook.email': profile.emails[0].value,          
+          'facebook.image': profile.photos[0].value,          
+        })
+          .then((newUser)=>{
+            return done(null, newUser);
+          })
+      }
+    })    
+
+  }
+))

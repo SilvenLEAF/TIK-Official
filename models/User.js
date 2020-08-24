@@ -34,6 +34,21 @@ const GithubSchema = new mongoose.Schema({
 
 
 
+const FacebookSchema = new mongoose.Schema({
+  FacebookId: {
+    type: String,
+  },
+  userName: String,
+  email: { 
+    type: String, 
+  }, 
+  image: String,
+})
+
+
+
+
+
 
 /* --------------------------
 .         USER SCHEMA
@@ -41,6 +56,7 @@ const GithubSchema = new mongoose.Schema({
 const UserSchema = new mongoose.Schema({  
   google: GoogleSchema,
   github: GithubSchema,
+  facebook: FacebookSchema,
   userName: {
     type: String
   },

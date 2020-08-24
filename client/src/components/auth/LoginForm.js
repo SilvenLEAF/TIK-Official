@@ -2,7 +2,7 @@ import M from 'materialize-css'
 import '../../styles/authForm.scss'
 
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+
 
 function LoginForm() {
   useEffect(()=>{
@@ -16,19 +16,19 @@ function LoginForm() {
       <div className="container myAuthFormHolder">        
         <div className="myAuthMainBox">
           <h5>Log In</h5>
-          <a href="http://localhost:5000/auth/google" className="red darken-3 myOauthBtnGoogle">
+          <a href="/auth/google" className="red darken-3 myOauthBtnGoogle">
             <i className="fa fa-google"></i>
             <span>Continue with Google</span>
           </a>
 
 
-          <a href="http://localhost:5000/auth/facebook" className="myOauthBtnFacebook">
+          <a href="/auth/facebook" className="myOauthBtnFacebook">
             <i className="fa fa-facebook"></i>
             <span>Continue with Facebook</span>
           </a>
 
 
-          <a href="http://localhost:5000/auth/github" className="black myOauthBtnGithub">
+          <a href="/auth/github" className="black myOauthBtnGithub">
             <i className="fa fa-github"></i>
             <span>Continue with Github</span>
           </a>

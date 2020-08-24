@@ -1,6 +1,6 @@
 import 'materialize-css/dist/css/materialize.min.css'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Navbar from './components/layouts/Navbar'
@@ -17,11 +17,25 @@ import SignupForm from './components/auth/SignupForm'
 import LoginForm from './components/auth/LoginForm'
 
 function App() {
+  const [userData, setUserData] = useState();
+
+  useEffect(()=>{
+    const getLoggedinUser = async ()=>{
+      const loggedinUserRes = await fetch('/users/');
+      const loggedinUserData = await loggedinUserRes.json();
+
+      console.log(loggedinUserData);
+      setUserData(loggedinUserData)
+    }
+
+    getLoggedinUser();
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="App">
         <div id="wrapper">
-        <Navbar />
+        <Navbar userData={ userData } setUserData={ setUserData } />
           
 
           <Switch>
@@ -30,7 +44,7 @@ function App() {
             </Route>
 
             <Route path="/profile">
-              <Profile/>
+              <Profile userData={ userData } />
             </Route>
 
             <Route path="/solver">

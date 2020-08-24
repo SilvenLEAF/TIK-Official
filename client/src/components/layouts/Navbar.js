@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 
-function Navbar() {
-  const link = 0 ? <SignedInLinks /> : <SignedOutLinks />;
+function Navbar({ userData, setUserData }) {
+  const link = userData && userData.role ? <SignedInLinks setUserData={ setUserData } /> : <SignedOutLinks />;
   return (
     <nav id="myNavbar" className="nav-wrapper">
       <div className="container">

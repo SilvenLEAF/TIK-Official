@@ -2,24 +2,28 @@ import M from 'materialize-css'
 import '../../styles/Profile.scss'
 
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
-function Profile() {
+function Profile({ userData }) {
   useEffect(()=>{
     M.AutoInit();
   }, [])
-
   
+  const profileImage = userData.google.image || userData.github.image;
+  const history = useHistory();
+
+  if(!userData.role) return history.push('/login')
   return (
     <div id="myProfileContainer" className="container">      
-      <div id="mainProfileIcon"></div>
+      <div id="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>
 
-      <h3>SilvenLEAF</h3>
+      <h3>{ userData.userName && userData.userName }</h3>
       <h5>Fullstack Developer</h5>
+      <p className="red-text"> { userData.location && userData.location } </p>
 
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus minima perspiciatis deserunt sapiente dolorem at hic accusamus iure totam iste dolore natus perferendis maiores, asperiores, quaerat nam nobis, minus fugit? Animi eligendi nesciunt earum facilis ipsum, atque aspernatur. Architecto cupiditate impedit eveniet cum expedita dolor facere inventore officia quam.
+        { userData.about && userData.about }
       </p>
 
 

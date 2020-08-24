@@ -21,7 +21,7 @@ router.get('/auth/google', passport.authenticate('google', {
 router.get('/auth/google/callback',
   passport.authenticate('google'),
   (req, res)=>{
-    res.redirect('/profile')
+    res.redirect('/')
   }
 )
 
@@ -34,17 +34,39 @@ router.get('/auth/google/callback',
 .               GITHUB
 ---------------------------------------- */
 
-router.get('/auth/github', passport.authenticate('github', {
-  scope: ['profile', 'email']
-}))
+router.get('/auth/github', passport.authenticate('github'))
 
 
 router.get('/auth/github/callback',
   passport.authenticate('github'),
   (req, res)=>{
-    res.redirect('/profile')
+    res.redirect('/')
   }
 )
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------
+.               FACEBOOK
+---------------------------------------- */
+
+router.get('/auth/facebook', passport.authenticate('facebook'))
+
+
+router.get('/auth/facebook/callback',
+  passport.authenticate('facebook'),
+  (req, res)=>{
+    res.redirect('/')
+  }
+)
+
 
 
 
