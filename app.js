@@ -1,7 +1,8 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
-require('dotenv').config();
+
 
 
 
@@ -11,21 +12,22 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 
-// connecting to MongoDB
-mongoose.connect(process.env.MONGODB_STRING, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-}, (err)=>{
-  if(err) throw err;
-  console.log(`Connected to MongoDB`);
-})
+
 
 
 
 /* ---------------------------------
-.             middlewares
+.             config
+--------------------------------- */
+require('./config/mongoDBconfig');
+
+
+
+
+
+
+/* ---------------------------------
+.             ROUTES
 --------------------------------- */
 // ----------routes handling
 app.use(require('./routes/authRoutes'));
@@ -42,6 +44,9 @@ app.use((err, req, res, next)=>{
   console.log(err);
   return res.status(500).json({ error: err.message, msg: `Server Error!` });
 })
+
+
+
 
 
 
