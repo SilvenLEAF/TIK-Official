@@ -3,8 +3,8 @@ const AMAZON = {
   clientSecret: "0670646811fceac12bce8eb45572a9f978e80b000818f1f4cf867cfe5e9d1c27"
 };
 const GITHUB = {
-  clientID: "79fddc34b8980c9cb28a",
-  clientSecret: "d4cd9c251ac1207a585aec79dbdd70494a02975e"
+  clientID: "83db0279d50d722fae73",
+  clientSecret: "b921794b937de9e7da0064371a41b12d1d221e4d"
 };
 const FACEBOOK = {
   clientID: "2503599789703821",
