@@ -4,7 +4,7 @@ import '../../styles/Solver.scss'
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import CodeItem from '../GLOBAL/CodeItem';
+import EntertainmentCodeItem from '../entertainment/EntertainmentCodeItem';
 
 function Entertainment() {
   useEffect(()=>{
@@ -18,11 +18,11 @@ function Entertainment() {
       <Link to="/addEntertainment" className="blue fa fa-plus myAddBtn"></Link>
 
       <div id="solverItemsHolder">
-        <CodeItem/> 
-        <CodeItem/>
-        <CodeItem/>
-        <CodeItem/>
-        <CodeItem/>
+        <EntertainmentCodeItem/> 
+        <EntertainmentCodeItem/> 
+        <EntertainmentCodeItem/> 
+        <EntertainmentCodeItem/> 
+        <EntertainmentCodeItem/> 
       </div>
 
     </div>

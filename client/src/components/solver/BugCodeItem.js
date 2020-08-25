@@ -2,7 +2,7 @@ import '../../styles/CodeItem.scss'
 
 import React from 'react'
 
-function CodeItem() {
+function BugCodeItem() {
   const role = 'ceo';
   return (
     <div className="myCodeItem">
@@ -41,4 +41,4 @@ function CodeItem() {
   )
 }
 
-export default CodeItem
+export default BugCodeItem
