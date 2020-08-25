@@ -1,8 +1,7 @@
 import M from 'materialize-css'
-import '../../styles/Solver.scss'
 
 import React, { useEffect } from 'react'
-import CodeItem from '../GLOBAL/CodeItem';
+
 
 function AddEntertainmentCodeForm() {
   useEffect(()=>{
