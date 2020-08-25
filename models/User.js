@@ -60,22 +60,23 @@ const UserSchema = new mongoose.Schema({
   userName: {
     type: String
   },
+  initial: String,
   profileImage: String,
   location: {
     type: String,
     default: `Earth`
   },
-  developer: {
+  title: {
     type: String,
-    developer: `FrontEND`
+    default: `Newbie`
   },
   about: {
     type: String,
-    default: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem perferendis expedita labore, inventore amet quas illo hic consequuntur mollitia excepturi! Libero quas nostrum illo veritatis eligendi ex ducimus, voluptatibus incidunt sed inventore ipsam quo assumenda officia quibusdam. Excepturi aperiam, dolor dignissimos recusandae hic provident magnam maiores, itaque aut, officiis placeat.`
+    default: `Hello there Mr. Stranger! Wanna know about me? Well, there's not much to say! Hah ha!! I am a human from planet earth. I love all about tech. I wanna learn and explore the unknown, create new things and change the world. Let's be friends and learn and improve together.`
   },
   skills: {
     type: String,
-    default: `no skills yet`
+    default: ``
   },
   role: {
     type: String,
