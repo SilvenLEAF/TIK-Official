@@ -1,6 +1,10 @@
 import M from 'materialize-css'
+import '../../styles/Solver.scss'
 
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
+import CodeItem from '../GLOBAL/CodeItem';
 
 function Entertainment() {
   useEffect(()=>{
@@ -9,8 +13,18 @@ function Entertainment() {
 
   
   return (
-    <div className="container">
-      <h3>Entertainment!!</h3>
+    <div id="solverPage" className="container">
+      
+      <Link to="/addEntertainment" className="blue fa fa-plus myAddBtn"></Link>
+
+      <div id="solverItemsHolder">
+        <CodeItem/> 
+        <CodeItem/>
+        <CodeItem/>
+        <CodeItem/>
+        <CodeItem/>
+      </div>
+
     </div>
   )
 }
