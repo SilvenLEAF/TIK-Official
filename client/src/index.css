@@ -17,6 +17,7 @@ body{
   user-select: none;
   font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
+
 }
 
 
@@ -36,12 +37,19 @@ nav.nav-wrapper {
 /* ------------------------------------
 .       WRAPPER AND FOOTER
 ------------------------------------ */
-#wrapper {  
-  height: calc(100vh - 56px);
-  overflow: auto;  
+#myWrapper {  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 75px;
+
+  overflow: auto;
 }
 
-
+#myFooter{
+  z-index: 1000;
+}
 
 
 

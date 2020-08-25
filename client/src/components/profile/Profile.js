@@ -9,7 +9,7 @@ function Profile({ userData }) {
     M.AutoInit();
   }, [])
   
-  const profileImage = userData.profileImage;
+  const profileImage =  userData && userData.profileImage ? userData.profileImage : "/images/userIcons/userMale.jpg";
   const history = useHistory();
 
   

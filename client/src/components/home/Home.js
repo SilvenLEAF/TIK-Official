@@ -1,6 +1,10 @@
 import M from 'materialize-css'
+import '../../styles/Home.scss'
 
 import React, { useEffect } from 'react'
+
+import BasicButtons from './BasicButtons';
+import ControlPanelButtons from './ControlPanelButtons';
 
 function Home() {
   useEffect(()=>{
@@ -9,8 +13,18 @@ function Home() {
 
   
   return (
-    <div className="container">
-      <h1>Hello World!!</h1>
+    <div id="myHomeContainer" className="container">        
+      <div id="myHomeBtnsHolder">
+        <div>
+          <BasicButtons />
+        </div>
+        
+        <div>
+          <ControlPanelButtons/>
+        </div>
+        
+      </div>
+    
     </div>
   )
 }

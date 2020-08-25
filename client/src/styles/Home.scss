@@ -1,0 +1,15 @@
+#myHomeContainer {
+  margin-top: 50px;
+  text-align: justify;
+  
+  #myHomeBtnsHolder div {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+
+    button{
+      margin: 10px;
+    }
+    
+  }
+}
