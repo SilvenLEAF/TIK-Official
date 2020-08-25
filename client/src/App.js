@@ -58,8 +58,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div id="myWrapper">
         <Navbar userData={ userData } setUserData={ setUserData } />
+        <div id="myWrapper">
           
 
           <Switch>
