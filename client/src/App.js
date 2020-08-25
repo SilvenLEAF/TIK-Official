@@ -13,6 +13,7 @@ import AddBugCodeForm from './components/solver/AddBugCodeForm'
 import Team from './components/team/Team'
 import Spies from './components/spies/Spies'
 import Entertainment from './components/entertainment/Entertainment'
+import AddEntertainmentCodeForm from './components/entertainment/AddEntertainmentCodeForm'
 
 import SignupForm from './components/auth/SignupForm'
 import LoginForm from './components/auth/LoginForm'
@@ -90,6 +91,10 @@ function App() {
 
             <Route path="/entertainment">
               <Entertainment/>
+            </Route>
+
+            <Route path="/addEntertainment">
+              <AddEntertainmentCodeForm/>
             </Route>
 
 

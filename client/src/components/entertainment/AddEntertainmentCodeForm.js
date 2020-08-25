@@ -4,7 +4,7 @@ import '../../styles/Solver.scss'
 import React, { useEffect } from 'react'
 import CodeItem from '../GLOBAL/CodeItem';
 
-function AddBugCodeForm() {
+function AddEntertainmentCodeForm() {
   useEffect(()=>{
     M.AutoInit();
   }, [])
@@ -12,11 +12,11 @@ function AddBugCodeForm() {
   
   return (
     <div id="addBugCodesPage" className="container">
-      <h3>Add your bug</h3>
+      <h3>Add Entertainment</h3>
 
       <form>
         <div className="input-field">
-          <i className="prefix fa fa-bug"></i>
+          <i className="prefix fa fa-heart"></i>
           <input type="text"/>
           <label htmlFor="title">Title</label>
         </div>
@@ -34,7 +34,7 @@ function AddBugCodeForm() {
         </div>
 
         <div className="input-field right-align">
-          <button type="submit" className="btn red darken-4" >Add the Bug</button>
+          <button type="submit" className="btn blue" >Add Entertainment</button>
         </div>
 
 
@@ -44,4 +44,4 @@ function AddBugCodeForm() {
   )
 }
 
-export default AddBugCodeForm
+export default AddEntertainmentCodeForm
