@@ -9,6 +9,7 @@ import Footer from './components/layouts/Footer'
 import Home from './components/home/Home'
 import Profile from './components/profile/Profile'
 import Solver from './components/solver/Solver'
+import AddBugCodeForm from './components/solver/AddBugCodeForm'
 import Team from './components/team/Team'
 import Spies from './components/spies/Spies'
 import Entertainment from './components/entertainment/Entertainment'
@@ -73,6 +74,10 @@ function App() {
 
             <Route path="/solver">
               <Solver/>
+            </Route>
+
+            <Route path="/addBug">
+              <AddBugCodeForm/>
             </Route>
 
             <Route path="/team">

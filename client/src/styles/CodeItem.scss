@@ -1,0 +1,31 @@
+.myCodeItem {
+  background-color: #ccc;
+  margin-top: 20px;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  .myCodeTitle{
+    margin: 0;
+
+    font-size: 200%;
+    color: purple;
+    font-family: Dosis;
+  }
+
+  .myCodeOwner{
+    margin: 0;
+
+    font-size: 120%;
+    font-style: italic;
+    font-family: serif;
+    color: purple;
+  }
+
+  .myDate{
+    margin: 0;
+    color: #c00;  
+  }
+
+ 
+}
