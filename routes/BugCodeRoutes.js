@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bugCodeController = require('../controllers/bugCodeController');
 
-const isLoggedIn = require('../middlewares/isLoggedIn, deleteEntertainmentCodePost');
+const isLoggedIn = require('../middlewares/isLoggedIn');
 const deleteBugCodePost = require('../middlewares/deleteBugCodePost')
 
 router.get('/all', isLoggedIn, deleteBugCodePost, bugCodeController.get_all_bug_codes);

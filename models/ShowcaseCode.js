@@ -22,7 +22,7 @@ const ShowcaseCodeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  createdAt: new Date()
+  createdAt: String
 })
 
 

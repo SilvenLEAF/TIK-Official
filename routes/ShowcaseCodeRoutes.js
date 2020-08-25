@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const showcaseCodeController = require('../controllers/showcaseCodeController');
 
-const isLoggedIn = require('../middlewares/isLoggedIn, deleteEntertainmentCodePost');
+const isLoggedIn = require('../middlewares/isLoggedIn');
 const deleteShowcaseCodePost = require('../middlewares/deleteShowcaseCodePost')
 
 

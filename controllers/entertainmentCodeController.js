@@ -5,7 +5,7 @@ const isLoggedIn = require('../middlewares/isLoggedIn');
 /* -----------------------------------
 .     POST YOUR Entertainment CODE
 ----------------------------------- */
-module.exports.post_your_Entertainment_codes = async (req, res, next)=>{
+module.exports.post_your_entertainment_codes = async (req, res, next)=>{
   try {
     const EntertainmentCodePost = await EntertainmentCode.create({
       ...req.body,
@@ -23,7 +23,7 @@ module.exports.post_your_Entertainment_codes = async (req, res, next)=>{
 /* -----------------------------------
 .    GET ALL Entertainment CODES
 ----------------------------------- */
-module.exports.get_all_Entertainment_codes = async (req, res, next)=>{
+module.exports.get_all_entertainment_codes = async (req, res, next)=>{
   try {
     const allEntertainmentCodes = await EntertainmentCode.find({});
     res.json(allEntertainmentCodes);
@@ -39,7 +39,7 @@ module.exports.get_all_Entertainment_codes = async (req, res, next)=>{
 /* -----------------------------------
 .   DELETE Entertainment CODE POST
 ----------------------------------- */
-module.exports.delete_your_Entertainment_code_post = async (req, res, next)=>{
+module.exports.delete_your_entertainment_code_post = async (req, res, next)=>{
   try {
     const { requestedEntertainmentCodeId } = req.body;
 
@@ -58,7 +58,7 @@ module.exports.delete_your_Entertainment_code_post = async (req, res, next)=>{
 /* -----------------------------------
 .   UPDATE Entertainment CODE POST
 ----------------------------------- */
-module.exports.update_your_Entertainment_code_post = async (req, res, next)=>{
+module.exports.update_your_entertainment_code_post = async (req, res, next)=>{
   try {    
     const { requestedEntertainmentCodeId } = req.body;
 
