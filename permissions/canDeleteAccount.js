@@ -1,6 +1,6 @@
-const canDeleteAccount = (authUser, requestedUserId)=>{   
+const canDeleteAccount = (reqUser, requestedUserId)=>{   
   
-   return ( authUser.role === `ceo` || requestedUserId === authUser.id )
+   return ( reqUser.role === `ceo` || requestedUserId === reqUser.id )
   
 }
 

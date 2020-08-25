@@ -2,9 +2,9 @@ const canDeleteAccount = require('../permissions/canDeleteAccount');
 
 
 const deleteAccount = (req, res, next) =>{
-  const { userId } = req.body; 
+  const { requestedUserId } = req.body; 
 
-  if(!canDeleteAccount(req.user, userId))     
+  if(!canDeleteAccount(req.user, requestedUserId))     
     return res.status(401).json({ msg: `Not allowed.` });
 
   next();

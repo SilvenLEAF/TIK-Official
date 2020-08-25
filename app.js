@@ -40,6 +40,9 @@ require('./config/passportConfig')
 // ----------routes handling
 app.use(require('./routes/oauthRoutes'));
 app.use('/users', require('./routes/userRoutes'));
+app.use('/entertainmentCodes', require('./routes/EntertainmentCodeRoutes'));
+app.use('/showcaseCodes', require('./routes/ShowcaseCodeRoutes'))
+app.use('/bugCodes', require('./routes/BugCodeRoutes'));
 
 
 /* The catch-all handler. */
