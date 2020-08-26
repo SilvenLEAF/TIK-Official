@@ -1,12 +1,22 @@
 import '../../styles/Navbar.scss'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom';
 
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 
-function Navbar({ userData, setUserData }) {
+
+import { AuthContext } from '../../contexts/AuthContext';
+
+
+
+
+function Navbar() {
+
+  const { userData, setUserData } = useContext(AuthContext);
+
+
   const link = userData && userData.role ? <SignedInLinks setUserData={ setUserData } /> : <SignedOutLinks />;
   return (
     <nav id="myNavbar" className="nav-wrapper">

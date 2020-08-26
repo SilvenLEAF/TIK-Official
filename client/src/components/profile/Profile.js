@@ -1,14 +1,22 @@
 import M from 'materialize-css'
 import '../../styles/Profile.scss'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
-function Profile({ userData }) {
+
+import { AuthContext } from '../../contexts/AuthContext';
+
+
+
+
+function Profile() {
   useEffect(()=>{
     M.AutoInit();
   }, [])
   
+  
+  const { userData, setUserData } = useContext(AuthContext);
   const profileImage =  userData && userData.profileImage ? userData.profileImage : "/images/userIcons/userMale.jpg";
   const history = useHistory();
 
