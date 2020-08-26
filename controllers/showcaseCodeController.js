@@ -8,6 +8,7 @@ module.exports.post_your_showcase_codes = async (req, res, next)=>{
   try {
     const ShowcaseCodePost = await ShowcaseCode.create({
       ...req.body,
+      createdAt: new Date(),
       ownerName: req.user.userName,
       ownerId: req.user._id
     });

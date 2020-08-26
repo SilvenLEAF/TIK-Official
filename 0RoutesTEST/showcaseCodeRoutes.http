@@ -1,0 +1,58 @@
+##########################################
+#      GET ALL SHOWCASE POSTS
+##########################################
+GET http://localhost:5000/showcaseCodes/all HTTP/1.1
+
+
+
+
+
+##########################################
+#      POST YOUR SHOWCASE CODE
+##########################################
+POST http://localhost:5000/showcaseCodes/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title":"CELEBRATION TIME",
+  "link": "https://silvenleafytdownloader.herokuappl.com",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odit eaque quos amet eum officia ut provident tenetur ducimus, laudantium unde? Doloremque excepturi, reiciendis sapiente itaque, eos porro mollitia ipsam totam quod velit quisquam officia eum sit eius pariatur nemo, ex officiis? Sequi ad sunt sapiente quam maiores quia cupiditate?",
+  "ownerName": "DragoKNIGHT",
+  "ownerId": "shenl0ng"
+}
+
+
+
+
+
+
+
+
+##########################################
+#       DELETE YOUR SHOWCASE CODE
+##########################################
+DELETE http://localhost:5000/showcaseCodes/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "showcaseCodeId": "5f45c38b69c0be21acaa21be"
+}
+
+
+
+
+
+
+
+
+
+##########################################
+#         UPDATE YOUR SHOWCASE CODE
+##########################################
+PUT http://localhost:5000/showcaseCodes/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "showcaseCodeId": "5f45c3a169c0be21acaa21bf",
+  "title": "YTD 5.0"
+}

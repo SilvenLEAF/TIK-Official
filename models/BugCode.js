@@ -30,3 +30,6 @@ const BugCodeSchema = new mongoose.Schema({
 
 // Creating BugCode model
 module.exports = BugCode = mongoose.model('bugcode', BugCodeSchema);
+
+
+

@@ -1,5 +1,5 @@
 const EntertainmentCode = require('../models/EntertainmentCode');
-const isLoggedIn = require('../middlewares/isLoggedIn');
+
 
 
 /* -----------------------------------
@@ -7,12 +7,14 @@ const isLoggedIn = require('../middlewares/isLoggedIn');
 ----------------------------------- */
 module.exports.post_your_entertainment_codes = async (req, res, next)=>{
   try {
-    const EntertainmentCodePost = await EntertainmentCode.create({
+    console.log(`hello`)
+    const entertainmentCodePost = await EntertainmentCode.create({
       ...req.body,
+      createdAt: new Date(),      
       ownerName: req.user.userName,
       ownerId: req.user._id
     });
-    res.json(EntertainmentCodePost);
+    res.json(entertainmentCodePost);
   } catch (err) {
     next(err, req, res)
   }
@@ -41,9 +43,9 @@ module.exports.get_all_entertainment_codes = async (req, res, next)=>{
 ----------------------------------- */
 module.exports.delete_your_entertainment_code_post = async (req, res, next)=>{
   try {
-    const { requestedEntertainmentCodeId } = req.body;
+    const { entertainmentCodeId } = req.body;
 
-    const deletedEntertainmentCodePost = await EntertainmentCode.findByIdAndDelete(requestedEntertainmentCodeId);
+    const deletedEntertainmentCodePost = await EntertainmentCode.findByIdAndDelete(entertainmentCodeId);
     res.json(deletedEntertainmentCodePost)
 
   } catch (err) {
@@ -60,10 +62,10 @@ module.exports.delete_your_entertainment_code_post = async (req, res, next)=>{
 ----------------------------------- */
 module.exports.update_your_entertainment_code_post = async (req, res, next)=>{
   try {    
-    const { requestedEntertainmentCodeId } = req.body;
+    const { entertainmentCodeId } = req.body;
 
-    await EntertainmentCode.findByIdAndUpdate(requestedEntertainmentCodeId, req.body);
-    const updatedEntertainmentCode = await EntertainmentCode.findById(requestedEntertainmentCodeId);
+    await EntertainmentCode.findByIdAndUpdate(entertainmentCodeId, req.body);
+    const updatedEntertainmentCode = await EntertainmentCode.findById(entertainmentCodeId);
 
     res.json(updatedEntertainmentCode);
 
