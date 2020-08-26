@@ -47,21 +47,19 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
       <div className="right-align">
         
         {
-          role === 'ceo' ? (
-            <button className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}}>
-              Solved
-            </button>
-          ) : (
-            <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
-              Update
-            </button>
+          role === 'ceo' && (
+            <>
+              <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
+                Update
+              </button>
+              <button className="btn waves-effect waves-light red darken-4" onClick={ deleteEntertainmentCodePost } >
+                Delete
+              </button>
+            </>
           )
         }
         
 
-        <button className="btn waves-effect waves-light red darken-4" onClick={ deleteEntertainmentCodePost } >
-          Delete
-        </button>
         
       </div>
     </div>
