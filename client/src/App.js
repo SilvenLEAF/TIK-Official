@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import AuthContextProvider from './contexts/AuthContext'
 import BugContextProvider from './contexts/BugContext'
+import EntertainmentContextProvider from './contexts/EntertainmentContext'
 
 
 
@@ -50,7 +51,8 @@ function App() {
   // const [userData, setUserData] = useState(githubData);
   
   const [userData, setUserData] = useState();
-  const [bugPosts, setBugPosts] = useState([1,3,4,6,7])
+  const [bugPosts, setBugPosts] = useState()
+  const [entertainmentPosts, setEntertainmentPosts] = useState()
 
 
 
@@ -91,16 +93,36 @@ function App() {
 
 
   
+   /* ----------------------------------------
+  .       GET ALL ENTERTAINMENT POSTS
+  ---------------------------------------- */
+  useEffect(()=>{
+    const getAllEntertainmentPosts = async ()=>{
+      const allEntertainmentPostRes = await fetch('http://localhost:5000/entertainmentCodes/all');
+      const allEntertainmentPostData = await allEntertainmentPostRes.json();
+
+      console.log(allEntertainmentPostData);
+      setEntertainmentPosts(allEntertainmentPostData)
+    }
+
+    getAllEntertainmentPosts();
+  }, [])
+
+
+
+
+  
 
   return (
     <BrowserRouter>
       <AuthContextProvider userData={ userData } setUserData={ setUserData }>
         <BugContextProvider bugPosts={ bugPosts } setBugPosts={ setBugPosts }>
+          <EntertainmentContextProvider entertainmentPosts={ entertainmentPosts } setEntertainmentPosts={ setEntertainmentPosts }>
 
 
 
 
-        <div className="App">
+            <div className="App">
               <Navbar />
               <div id="myWrapper">
                 
@@ -154,9 +176,10 @@ function App() {
 
               <Footer />
             </div>
+          
 
 
-
+          </EntertainmentContextProvider>
         </BugContextProvider>
       </AuthContextProvider>
 

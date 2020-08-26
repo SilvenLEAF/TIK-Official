@@ -22,7 +22,7 @@ function Solver() {
       
       <Link to="/addBug" className="blue fa fa-plus myAddBtn"></Link>
 
-      <div id="solverItemsHolder">
+      <div id="mySolverItemsHolder">
         {
           bugPosts && bugPosts.map((item, index)=>{
             return <BugCodeItem setBugPosts={ setBugPosts } allPosts={ bugPosts} bugPost={item} index={index} key={index} />

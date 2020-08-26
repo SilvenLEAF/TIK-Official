@@ -7,12 +7,11 @@ const EntertainmentCode = require('../models/EntertainmentCode');
 ----------------------------------- */
 module.exports.post_your_entertainment_codes = async (req, res, next)=>{
   try {
-    console.log(`hello`)
     const entertainmentCodePost = await EntertainmentCode.create({
       ...req.body,
       createdAt: new Date(),      
-      ownerName: req.user.userName,
-      ownerId: req.user._id
+      // ownerName: req.user.userName,
+      // ownerId: req.user._id
     });
     res.json(entertainmentCodePost);
   } catch (err) {
@@ -28,7 +27,7 @@ module.exports.post_your_entertainment_codes = async (req, res, next)=>{
 module.exports.get_all_entertainment_codes = async (req, res, next)=>{
   try {
     const allEntertainmentCodes = await EntertainmentCode.find({});
-    res.json(allEntertainmentCodes);
+    res.json(allEntertainmentCodes.reverse());
   } catch (err) {
     next(err, req, res);
   }
