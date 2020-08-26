@@ -10,8 +10,8 @@ module.exports.post_your_bug_codes = async (req, res, next)=>{
     const bugCodePost = await BugCode.create({
       ...req.body,
       createdAt: new Date(),
-      ownerName: req.user.userName,      
-      ownerId: req.user._id
+      // ownerName: req.user.userName,      
+      // ownerId: req.user._id
     });
     res.json(bugCodePost);
   } catch (err) {
@@ -27,7 +27,7 @@ module.exports.post_your_bug_codes = async (req, res, next)=>{
 module.exports.get_all_bug_codes = async (req, res, next)=>{
   try {
     const allBugCodes = await BugCode.find({});
-    res.json(allBugCodes);
+    res.json(allBugCodes.reverse());
   } catch (err) {
     next(err, req, res);
   }

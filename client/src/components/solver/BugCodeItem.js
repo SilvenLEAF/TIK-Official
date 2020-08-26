@@ -2,19 +2,46 @@ import '../../styles/CodeItem.scss'
 
 import React from 'react'
 
-function BugCodeItem() {
+function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
   const role = 'ceo';
+
+
+  const deleteBugCodePost = async (e)=>{
+    e.preventDefault();
+    
+    const newArray = allPosts.splice(index, 1);
+
+    setBugPosts([
+      ...allPosts
+    ]);
+
+    const deleteBugCodePostRes = await fetch('/bugCodes/', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ bugCodeId: bugPost._id })
+    });
+
+    const deleteBugCodePostData = await deleteBugCodePostRes.json();
+    console.log(deleteBugCodePostData);
+  }
+
+
+
   return (
     <div className="myCodeItem">
-      <div className="center myCodeTitle">Lorem ipsum</div>
-      <div className="myCodeOwner">(SilvenLEAF)</div>
+      <div className="center myCodeTitle">
+        <a href={ bugPost.link }>{ bugPost.title }</a>
+      </div>
+      <div className="myCodeOwner">({ bugPost.ownerName })</div>
      
       <div className="myDate left-align">
-        Last Yesterday 8:30 pm
+        { bugPost.createdAt }
       </div>
 
       <p className="truncate">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est quaerat fugit error nostrum voluptatum quibusdam perferendis ratione! Nisi, cum neque, enim veniam delectus at iste pariatur voluptate eum, asperiores modi accusantium est. Atque, dolore facere magni quis veniam modi incidunt nobis. Eligendi odit nam vel fugit quo, consequuntur cum.
+        { bugPost.description }
       </p>
 
       <div className="right-align">
@@ -32,7 +59,7 @@ function BugCodeItem() {
         }
         
 
-        <button className="btn waves-effect waves-light red darken-4">
+        <button className="btn waves-effect waves-light red darken-4" onClick={ deleteBugCodePost } >
           Delete
         </button>
         
