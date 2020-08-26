@@ -15,7 +15,7 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
       ...allPosts
     ]);
 
-    const deleteEntertainmentCodePostRes = await fetch('http://localhost:5000/entertainmentCodes/', {
+    const deleteEntertainmentCodePostRes = await fetch('/entertainmentCodes/', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

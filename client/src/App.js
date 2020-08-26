@@ -98,7 +98,7 @@ function App() {
   ---------------------------------------- */
   useEffect(()=>{
     const getAllEntertainmentPosts = async ()=>{
-      const allEntertainmentPostRes = await fetch('http://localhost:5000/entertainmentCodes/all');
+      const allEntertainmentPostRes = await fetch('/entertainmentCodes/all');
       const allEntertainmentPostData = await allEntertainmentPostRes.json();
 
       console.log(allEntertainmentPostData);
