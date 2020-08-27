@@ -36,18 +36,26 @@ function Navbar() {
         <ul className="right hide-on-med-and-down">
           { link }
           <li style={{marginLeft: '20px'}}>
-            <Link to="/profile" className="btn-floating center pulse white myProfileIcon">
-              KO
-            </Link>
+            {
+              userData._id && (
+              <Link to="/profile" className="btn-floating center pulse white myProfileIcon">
+                { userData.userName[0] }
+              </Link>
+              )
+            }
           </li>
         </ul>
 
 
         <ul className="right hide-on-large-only">
           <li>
-            <Link to="/profile" className="btn-floating center pulse white myProfileIcon">
-              KO
-            </Link>
+            {
+              userData._id && (
+                <Link to="/profile" className="btn-floating center pulse white myProfileIcon">
+                  { userData.userName[0] }
+                </Link>
+                )
+              }
           </li>
         </ul>
       </div>

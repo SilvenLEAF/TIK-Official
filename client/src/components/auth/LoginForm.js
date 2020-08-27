@@ -35,7 +35,7 @@ function LoginForm() {
 
           <a href="/auth/github" className="black myOauthBtnGithub">
             <i className="fa fa-github"></i>
-            <span>Continue with Github</span>
+            <span>Only CTO can use it</span>
           </a>
 
           <p>
