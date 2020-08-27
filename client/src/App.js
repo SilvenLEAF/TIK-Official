@@ -1,3 +1,6 @@
+// ---fake data for testing
+// import Fake from './DataTESTING'
+
 import 'materialize-css/dist/css/materialize.min.css'
 
 import React, { useEffect, useState } from 'react'
@@ -6,6 +9,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 import AuthContextProvider from './contexts/AuthContext'
+import AllUsersContextProvider from './contexts/AllUsersContext'
 import BugContextProvider from './contexts/BugContext'
 import EntertainmentContextProvider from './contexts/EntertainmentContext'
 
@@ -20,6 +24,7 @@ import UpdateProfile from './components/profile/UpdateProfile'
 import Solver from './components/solver/Solver'
 import AddBugCodeForm from './components/solver/AddBugCodeForm'
 import Team from './components/team/Team'
+import UserProfile from './components/team/UserProfile'
 import Spies from './components/spies/Spies'
 import Entertainment from './components/entertainment/Entertainment'
 import AddEntertainmentCodeForm from './components/entertainment/AddEntertainmentCodeForm'
@@ -29,30 +34,15 @@ import LoginForm from './components/auth/LoginForm'
 
 function App() {
   
-  /* ----------------------------------------
-  .               Github Data
-  ---------------------------------------- */
-  // const githubData = {
-  //   _id: {"$oid":"5f43b9fa623cdb00175f29de"},
-  //   location: "Earth",
-  //   about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem perferendis expedita labore, inventore amet quas illo hic consequuntur mollitia excepturi! Libero quas nostrum illo veritatis eligendi ex ducimus, voluptatibus incidunt sed inventore ipsam quo assumenda officia quibusdam. Excepturi aperiam, dolor dignissimos recusandae hic provident magnam maiores, itaque aut, officiis placeat.",
-  //   skills: "HTML5 CSS3 JavaScript React Materialize NodeJS ExpressJS PassportJS MongoDB",
-  //   title: "Mister Newbie",
-  //   role: "user",
-  //   userName: "Manash Sarma",
-  //   profileImage: "https://avatars0.githubusercontent.com/u/62974089?v=4",
-  //   github: {
-  //     _id: {"$oid":"5f43b9fa623cdb00175f29df"},
-  //     githubId: "62974089",
-  //     userName: "Manash Sarma",
-  //     email: "SilvenLEAF@gmail.com",
-  //     image: "https://avatars0.githubusercontent.com/u/62974089?v=4"
-  //   },
-  //   __v:{"$numberInt":"0"}
-  // }  
-  // const [userData, setUserData] = useState(githubData);
+  // const [userData, setUserData] = useState(Fake.profileData);
+  // const [allUsers, setAllUsers] = useState(Fake.allUsers);
+  // const [bugPosts, setBugPosts] = useState(Fake.entertainmentData)
+  // const [entertainmentPosts, setEntertainmentPosts] = useState(Fake.entertainmentData)
+  
+  
   
   const [userData, setUserData] = useState({});
+  const [allUsers, setAllUsers] = useState([]);
   const [bugPosts, setBugPosts] = useState([])
   const [entertainmentPosts, setEntertainmentPosts] = useState([])
 
@@ -74,7 +64,28 @@ function App() {
   }, [])
 
 
-   /* ----------------------------------------
+
+
+  /* ----------------------------------------
+  .            GET ALL USERS
+  ---------------------------------------- */
+  useEffect(()=>{
+    const getAllUsers = async ()=>{
+      const allUsersRes = await fetch('/users/all');
+      const allUsersData = await allUsersRes.json();
+
+      console.log(allUsersData);
+      setAllUsers(allUsersData)
+    }
+
+    getAllUsers();
+  }, [])
+
+
+
+
+
+  /* ----------------------------------------
   .            GET ALL BUG POSTS
   ---------------------------------------- */
   useEffect(()=>{
@@ -95,7 +106,7 @@ function App() {
 
 
   
-   /* ----------------------------------------
+  /* ----------------------------------------
   .       GET ALL ENTERTAINMENT POSTS
   ---------------------------------------- */
   useEffect(()=>{
@@ -118,75 +129,79 @@ function App() {
   return (
     <BrowserRouter>
       <AuthContextProvider userData={ userData } setUserData={ setUserData }>
+        <AllUsersContextProvider allUsers={ allUsers } setAllUsers={ setAllUsers } >
         <BugContextProvider bugPosts={ bugPosts } setBugPosts={ setBugPosts }>
-          <EntertainmentContextProvider entertainmentPosts={ entertainmentPosts } setEntertainmentPosts={ setEntertainmentPosts }>
+            <EntertainmentContextProvider entertainmentPosts={ entertainmentPosts } setEntertainmentPosts={ setEntertainmentPosts }>
 
 
 
 
-            <div className="App">
-              <Navbar />
-              <div id="myWrapper">
-                
-
-                <Switch>
-
-                  <Route path="/login">
-                    <LoginForm/>
-                  </Route>
-
-                <Route path="/signup">
-                    <SignupForm/>
-                  </Route>
-
-                  <Route exact path="/">
-                    <Home/>
-                  </Route>
-
-                  <Route path="/profile">
-                    <Profile />
-                  </Route>
+              <div className="App">
+                <Navbar />
+                <div id="myWrapper">
                   
-                  <Route path="/updateProfile">
-                    <UpdateProfile />
-                  </Route>
 
-                  <Route path="/solver">
-                    <Solver/>
-                  </Route>
+                  <Switch>
 
-                  <Route path="/addBug">
-                    <AddBugCodeForm/>
-                  </Route>
+                    <Route path="/login">
+                      <LoginForm/>
+                    </Route>
 
-                  <Route path="/team">
-                    <Team/>
-                  </Route>
+                  <Route path="/signup">
+                      <SignupForm/>
+                    </Route>
 
-                  <Route path="/spies">
-                    <Spies/>
-                  </Route>
+                    <Route exact path="/">
+                      <Home/>
+                    </Route>
 
-                  <Route path="/entertainment">
-                    <Entertainment/>
-                  </Route>
+                    <Route path="/profile">
+                      <Profile />
+                    </Route>
+                    
+                    <Route path="/updateProfile">
+                      <UpdateProfile />
+                    </Route>
 
-                  <Route path="/addEntertainment">
-                    <AddEntertainmentCodeForm/>
-                  </Route>                 
+                    <Route path="/solver">
+                      <Solver/>
+                    </Route>
+
+                    <Route path="/addBug">
+                      <AddBugCodeForm/>
+                    </Route>
+
+                    <Route path="/team">
+                      <Team/>
+                    </Route>
+
+                    <Route path="/userProfile/:index" component={UserProfile} />
+
+                    <Route path="/spies">
+                      <Spies/>
+                    </Route>
+
+                    <Route path="/entertainment">
+                      <Entertainment/>
+                    </Route>
+
+                    <Route path="/addEntertainment">
+                      <AddEntertainmentCodeForm/>
+                    </Route>                 
 
 
-                </Switch>
+                  </Switch>
+                </div>
+
+
+                <Footer />
               </div>
+            
 
 
-              <Footer />
-            </div>
-          
-
-
-          </EntertainmentContextProvider>
-        </BugContextProvider>
+            </EntertainmentContextProvider>
+          </BugContextProvider>
+        </AllUsersContextProvider>
       </AuthContextProvider>
 
 

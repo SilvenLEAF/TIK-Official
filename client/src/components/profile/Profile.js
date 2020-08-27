@@ -21,11 +21,32 @@ function Profile() {
   const history = useHistory();
 
   
+
+  const deleteProfile = async (e) =>{
+    e.preventDefault();
+
+    const requestedUserId = userData._id;
+    
+    const deletedProfileRes = await fetch('/users/', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({requestedUserId})
+    });
+
+    const deletedProfileData = await deletedProfileRes.json();
+
+    console.log(deletedProfileData)
+    window.location.href = `/login`
+  }
+
+
   if(!userData._id) history.push('/login')
 
   return (
-    <div id="myProfileContainer" className="container">      
-      <div id="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>
+    <div className="container myProfileContainer">      
+      <div className="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>
 
       <h3>{ userData.userName && userData.userName }</h3>
       <h5>{ userData.title && userData.title }</h5>
@@ -37,7 +58,7 @@ function Profile() {
       </p>
 
       <h5 className="purple-text myProfileSectionTitle">Skills</h5>
-      <ul id="mySkillsHolder" className="blue-text text-darken-3">
+      <ul className="blue-text text-darken-3 mySkillsHolder">
         { 
           userData.skills && userData.skills.split(' ').map((item, index)=>{
             return (
@@ -50,7 +71,7 @@ function Profile() {
 
       <div className="right myProfileBtnsHolder">
         <Link to="/updateProfile" className="btn blue" style={{marginRight: "20px"}}>Update</Link>
-        <button className="btn red darken-4">Delete</button>
+        <button className="btn red darken-4" onClick={ deleteProfile } >Delete</button>
       </div>
     </div>
   )
