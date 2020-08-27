@@ -21,6 +21,8 @@ function Profile() {
   const history = useHistory();
 
   
+  if(!userData._id) history.push('/login')
+
   return (
     <div id="myProfileContainer" className="container">      
       <div id="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>

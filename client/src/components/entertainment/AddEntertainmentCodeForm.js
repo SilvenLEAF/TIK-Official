@@ -1,13 +1,17 @@
 import M from 'materialize-css'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom';
 
-
+import { AuthContext } from '../../contexts/AuthContext'
+  
 function AddEntertainmentCodeForm() {
   useEffect(()=>{
     M.AutoInit();
   }, [])
-
+  
+  const { userData, setUserData } = useContext(AuthContext)
+  const history = useHistory()
   
   const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
@@ -40,6 +44,8 @@ function AddEntertainmentCodeForm() {
   
 
 
+
+  if(!userData._id) history.push('/login')
 
   return (
     <div id="addEntertainmentCodesPage" className="container">

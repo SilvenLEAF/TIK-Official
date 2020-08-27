@@ -50,9 +50,9 @@ function App() {
   // }  
   // const [userData, setUserData] = useState(githubData);
   
-  const [userData, setUserData] = useState();
-  const [bugPosts, setBugPosts] = useState()
-  const [entertainmentPosts, setEntertainmentPosts] = useState()
+  const [userData, setUserData] = useState({});
+  const [bugPosts, setBugPosts] = useState([])
+  const [entertainmentPosts, setEntertainmentPosts] = useState([])
 
 
 
@@ -128,6 +128,15 @@ function App() {
                 
 
                 <Switch>
+
+                  <Route path="/login">
+                    <LoginForm/>
+                  </Route>
+
+                <Route path="/signup">
+                    <SignupForm/>
+                  </Route>
+
                   <Route exact path="/">
                     <Home/>
                   </Route>
@@ -158,16 +167,7 @@ function App() {
 
                   <Route path="/addEntertainment">
                     <AddEntertainmentCodeForm/>
-                  </Route>
-
-
-                  <Route path="/signup">
-                    <SignupForm/>
-                  </Route>
-
-                  <Route path="/login">
-                    <LoginForm/>
-                  </Route>
+                  </Route>                 
 
 
                 </Switch>

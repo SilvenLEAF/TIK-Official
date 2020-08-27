@@ -1,13 +1,18 @@
 import M from 'materialize-css'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 
+import { AuthContext } from '../../contexts/AuthContext'
 
 function AddBugCodeForm() {
   useEffect(()=>{
     M.AutoInit();
   }, [])
-
+  
+  const { userData, setUserData } = useContext(AuthContext)
+  const history = useHistory()
+  
   
   const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
@@ -33,15 +38,16 @@ function AddBugCodeForm() {
     setTitle('')
     setLink('')
     setDescription('')
-
+    
 
     console.log(postedBugCodeData)
     window.location.href = `/solver`
   }
   
-
-
-
+  
+  
+  if(!userData._id) history.push('/login')
+  
   return (
     <div id="addBugCodesPage" className="container">
       <h3>Add your bug</h3>

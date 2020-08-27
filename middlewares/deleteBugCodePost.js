@@ -1,10 +1,12 @@
 const canDeleteCodePost = require('../permissions/canDeleteCodePost');
+const BugCode = require('../models/BugCode');
 
 
-const deleteBugCodePost = (req, res, next) =>{
+const deleteBugCodePost = async (req, res, next) =>{
   const { bugCodeId } = req.body; 
-
-  if(!canDeleteCodePost(req.user, bugCodeId))     
+  const code = await BugCode.findById(bugCodeId);
+  console.log(code)
+  if(!canDeleteCodePost(req.user, code))     
     return res.status(401).json({ msg: `Not allowed.` });
 
   next();

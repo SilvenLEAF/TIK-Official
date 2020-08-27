@@ -2,8 +2,9 @@ const canDeleteEntertainmentCodePost = require('../permissions/canDeleteEntertai
 
 
 const deleteEntertainmentCodePost = (req, res, next) =>{
-
-  if(!canDeleteEntertainmentCodePost(req.user))     
+  const { entertainmentCodeId } = req.body;
+  
+  if(!canDeleteEntertainmentCodePost(req.user, entertainmentCodeId))     
     return res.status(401).json({ msg: `Not allowed.` });
 
   next();
