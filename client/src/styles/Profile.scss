@@ -23,4 +23,30 @@
   .myProfileBtnsHolder{
     margin: 50px auto 70px auto;
   }
+
+
+  .myProfileSectionTitle{
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  #mySkillsHolder {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      margin: 0;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+
+      padding: 10px 20px;
+      background-color: purple;
+      border-radius: 50px;
+
+      color: #fff;
+    }
+
+  }
 }

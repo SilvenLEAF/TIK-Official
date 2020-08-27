@@ -28,13 +28,24 @@ function Profile() {
       <div id="mainProfileIcon" style={{background: `url(${profileImage}) center/cover`}}></div>
 
       <h3>{ userData.userName && userData.userName }</h3>
-      <h5>Fullstack Developer</h5>
+      <h5>{ userData.title && userData.title }</h5>
       <p className="red-text"> { userData.location && userData.location } </p>
 
 
       <p>
         { userData.about && userData.about }
       </p>
+
+      <h5 className="purple-text myProfileSectionTitle">Skills</h5>
+      <ul id="mySkillsHolder" className="blue-text text-darken-3">
+        { 
+          userData.skills && userData.skills.split(' ').map((item, index)=>{
+            return (
+              <li key={ index }>{ item }</li>
+            )
+          })
+        }
+      </ul>
 
 
       <div className="right myProfileBtnsHolder">

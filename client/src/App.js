@@ -31,26 +31,27 @@ function App() {
   /* ----------------------------------------
   .               Github Data
   ---------------------------------------- */
-  // const githubData = {
-  //   _id: {"$oid":"5f43b9fa623cdb00175f29de"},
-  //   location: "Earth",
-  //   about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem perferendis expedita labore, inventore amet quas illo hic consequuntur mollitia excepturi! Libero quas nostrum illo veritatis eligendi ex ducimus, voluptatibus incidunt sed inventore ipsam quo assumenda officia quibusdam. Excepturi aperiam, dolor dignissimos recusandae hic provident magnam maiores, itaque aut, officiis placeat.",
-  //   skills: "no skills yet",
-  //   role: "user",
-  //   userName: "Manash Sarma",
-  //   profileImage: "https://avatars0.githubusercontent.com/u/62974089?v=4",
-  //   github: {
-  //     _id: {"$oid":"5f43b9fa623cdb00175f29df"},
-  //     githubId: "62974089",
-  //     userName: "Manash Sarma",
-  //     email: "SilvenLEAF@gmail.com",
-  //     image: "https://avatars0.githubusercontent.com/u/62974089?v=4"
-  //   },
-  //   __v:{"$numberInt":"0"}
-  // }  
-  // const [userData, setUserData] = useState(githubData);
+  const githubData = {
+    _id: {"$oid":"5f43b9fa623cdb00175f29de"},
+    location: "Earth",
+    about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem perferendis expedita labore, inventore amet quas illo hic consequuntur mollitia excepturi! Libero quas nostrum illo veritatis eligendi ex ducimus, voluptatibus incidunt sed inventore ipsam quo assumenda officia quibusdam. Excepturi aperiam, dolor dignissimos recusandae hic provident magnam maiores, itaque aut, officiis placeat.",
+    skills: "HTML5 CSS3 JavaScript React Materialize NodeJS ExpressJS PassportJS MongoDB",
+    title: "Mister Newbie",
+    role: "user",
+    userName: "Manash Sarma",
+    profileImage: "https://avatars0.githubusercontent.com/u/62974089?v=4",
+    github: {
+      _id: {"$oid":"5f43b9fa623cdb00175f29df"},
+      githubId: "62974089",
+      userName: "Manash Sarma",
+      email: "SilvenLEAF@gmail.com",
+      image: "https://avatars0.githubusercontent.com/u/62974089?v=4"
+    },
+    __v:{"$numberInt":"0"}
+  }  
+  const [userData, setUserData] = useState(githubData);
   
-  const [userData, setUserData] = useState({});
+  // const [userData, setUserData] = useState({});
   const [bugPosts, setBugPosts] = useState([])
   const [entertainmentPosts, setEntertainmentPosts] = useState([])
 
