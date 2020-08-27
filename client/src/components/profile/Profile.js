@@ -49,8 +49,8 @@ function Profile() {
 
 
       <div className="right myProfileBtnsHolder">
-        <Link to="/" className="btn blue" style={{marginRight: "20px"}}>Update</Link>
-        <Link to="/" className="btn red darken-4">Delete</Link>
+        <Link to="/updateProfile" className="btn blue" style={{marginRight: "20px"}}>Update</Link>
+        <button className="btn red darken-4">Delete</button>
       </div>
     </div>
   )

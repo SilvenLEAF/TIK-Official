@@ -20,8 +20,8 @@ router.get('/', isLoggedIn, (req, res, next)=>{
 
 
 router.get('/all', userController.get_all_users);
-router.delete('/deleteAccount', deleteAccount, userController.delete_account);
-router.put('/updateProfile', isLoggedIn, userController.update_profile);
+router.delete('/', deleteAccount, userController.delete_account);
+router.put('/', isLoggedIn, userController.update_profile);
 
 
 module.exports = router;

@@ -1,7 +1,7 @@
 import M from 'materialize-css'
 
 import React, { useEffect, useState, useContext } from 'react'
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { AuthContext } from '../../contexts/AuthContext'
   
@@ -71,7 +71,8 @@ function AddEntertainmentCodeForm() {
         </div>
 
         <div className="input-field right-align">
-          <button type="submit" className="btn blue" >Add Entertainment</button>
+          <button type="submit" className="btn blue" style={{marginRight: "20px"}} >Add Entertainment</button>
+          <Link to="/entertainment" className="btn red darken-4">Cancel</Link>
         </div>
 
 

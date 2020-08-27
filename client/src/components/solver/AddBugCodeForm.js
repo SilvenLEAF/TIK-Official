@@ -1,7 +1,7 @@
 import M from 'materialize-css'
 
 import React, { useEffect, useState, useContext } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import { AuthContext } from '../../contexts/AuthContext'
 
@@ -72,7 +72,8 @@ function AddBugCodeForm() {
         </div>
 
         <div className="input-field right-align">
-          <button type="submit" className="btn red darken-4" >Add the Bug</button>
+        <button type="submit" className="btn blue" style={{marginRight: "20px"}} >Add your <i className="fa fa-bug"></i></button>
+          <Link to="/solver" className="btn red darken-4">Cancel</Link>
         </div>
 
 

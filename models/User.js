@@ -68,7 +68,7 @@ const UserSchema = new mongoose.Schema({
   },
   title: {
     type: String,
-    default: `Newbie`
+    default: `Mister Newbie`
   },
   about: {
     type: String,
@@ -76,7 +76,7 @@ const UserSchema = new mongoose.Schema({
   },
   skills: {
     type: String,
-    default: ``
+    default: `nothing-to-show`
   },
   role: {
     type: String,
