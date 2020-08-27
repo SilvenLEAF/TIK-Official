@@ -10,8 +10,8 @@ module.exports.post_your_entertainment_codes = async (req, res, next)=>{
     const entertainmentCodePost = await EntertainmentCode.create({
       ...req.body,
       createdAt: new Date(),      
-      // ownerName: req.user.userName,
-      // ownerId: req.user._id
+      ownerName: req.user.userName,
+      ownerId: req.user._id
     });
     res.json(entertainmentCodePost);
   } catch (err) {

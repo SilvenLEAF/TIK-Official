@@ -18,7 +18,7 @@ function AddBugCodeForm() {
   const postYourBugCode = async (e) =>{
     e.preventDefault();
 
-    let newBugPost = { title, link, description, ownerName: 'SilvenLEAF', ownerId: 'shenl0ng' }
+    let newBugPost = { title, link, description }
     
     const postedBugCodeRes = await fetch('/bugCodes/', {
       method: 'POST',
@@ -36,7 +36,7 @@ function AddBugCodeForm() {
 
 
     console.log(postedBugCodeData)
-    window.location.href = `http://localhost:3000/solver`
+    window.location.href = `/solver`
   }
   
 

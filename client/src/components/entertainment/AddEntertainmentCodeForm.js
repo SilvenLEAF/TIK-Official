@@ -18,7 +18,7 @@ function AddEntertainmentCodeForm() {
   const postYourEntertainmentCode = async (e) =>{
     e.preventDefault();
 
-    let newEntertainmentPost = { title, link, description, ownerName: 'SilvenLEAF', ownerId: 'shenl0ng' }
+    let newEntertainmentPost = { title, link, description }
     
     const postedEntertainmentCodeRes = await fetch('/entertainmentCodes/', {
       method: 'POST',
@@ -34,8 +34,8 @@ function AddEntertainmentCodeForm() {
     setLink('')
     setDescription('')
 
-
     console.log(postedEntertainmentCodeData)
+    window.location.href = `/entertainment`
   }
   
 
