@@ -36,6 +36,7 @@ function AddBugCodeForm() {
 
 
     console.log(postedBugCodeData)
+    window.location.href = `http://localhost:3000/solver`
   }
   
 

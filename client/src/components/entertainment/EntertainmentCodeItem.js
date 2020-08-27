@@ -1,5 +1,7 @@
 import '../../styles/CodeItem.scss'
 
+import moment from 'moment'
+
 import React from 'react'
 
 function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPosts, index }) {
@@ -37,7 +39,7 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
       <div className="myCodeOwner">({ entertainmentPost.ownerName })</div>
      
       <div className="myDate left-align">
-        { entertainmentPost.createdAt }
+        { moment(entertainmentPost.createdAt).calendar() }
       </div>
 
       <p className="truncate">

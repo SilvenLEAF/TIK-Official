@@ -1,6 +1,7 @@
 import '../../styles/CodeItem.scss'
 
 import React from 'react'
+import moment from 'moment'
 
 function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
   const role = 'ceo';
@@ -28,6 +29,7 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
   }
 
 
+       
 
   return (
     <div className="myCodeItem">
@@ -37,7 +39,7 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
       <div className="myCodeOwner">({ bugPost.ownerName })</div>
      
       <div className="myDate left-align">
-        { bugPost.createdAt }
+        { moment(bugPost.createdAt).calendar() }
       </div>
 
       <p className="truncate">
