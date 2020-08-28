@@ -8,7 +8,7 @@ TIK is a community of coders for sharing ideas, learning together, helping each 
 
 
 
-### DESIGNED BY ***CEO KADASH (Nigeria)***
+### DESIGNED BY ***CEO KADASH***
 ### CODED BY *SilvenLEAF*
 
 
