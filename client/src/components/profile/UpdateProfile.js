@@ -17,7 +17,7 @@ function UpdateProfile() {
   const [title, setTitle] = useState('');
   const [location, setLocation] = useState('');
   const [about, setAbout] = useState('');
-  const [skills, setSkills] = useState('');
+  const [skills, setSkills] = useState(userData.skills);
 
 
   
