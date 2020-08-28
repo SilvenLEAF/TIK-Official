@@ -42,7 +42,7 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
         { moment(bugPost.createdAt).calendar() }
       </div>
 
-      <p className="truncate">
+      <p className="truncate" onClick={ e=> e.target.classList.toggle('truncate') } >
         { bugPost.description }
       </p>
 

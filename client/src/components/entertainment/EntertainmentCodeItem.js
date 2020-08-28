@@ -42,7 +42,7 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
         { moment(entertainmentPost.createdAt).calendar() }
       </div>
 
-      <p className="truncate">
+      <p className="truncate" onClick={ e=> e.target.classList.toggle('truncate') } >
         { entertainmentPost.description }
       </p>
 
