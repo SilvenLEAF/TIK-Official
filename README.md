@@ -23,5 +23,5 @@ He has coded all functionslities, handled routes, apis, database, oauth2.0, role
 
 
 <br/><br/><br/><br/><br/>
-**ALL UI  AND DESIGNS CREDIT** *CEO KADASH*  
-**ALL FUNCTIONALITIES CREDIT** *SilvenLEAF*
+**UI  and Designs credit** *CEO KADASH*  
+**Functionalities credit** *SilvenLEAF*
