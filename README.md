@@ -1,6 +1,6 @@
 # TIK-Official
 
-**CEO and FOUNDER:**  *Cyber Kad (Nigeria)*  
+**CEO and FOUNDER:**  *Cyber Kad*  
 **CTO and Developer:** *SilvenLEAF*
 
 TIK is a community of coders for sharing ideas, learning together, helping each other, showcasing projects, fixing bugs, doing group projects, having hackathons and contests, algorithms and many many many more...
