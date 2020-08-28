@@ -83,7 +83,7 @@ function UpdateProfile() {
         
         <div className="input-field">
           <i className="prefix fa fa-star"></i>
-          <input type="text" value={ skills } onChange={ e => setSkills(e.target.value) } />
+          <input type="text" value={ skills } onChange={ e => setSkills(e.target.value) } autofocus="true" />
           <label htmlFor="skills">Skills (seperate them with spaces)</label>
         </div>
 

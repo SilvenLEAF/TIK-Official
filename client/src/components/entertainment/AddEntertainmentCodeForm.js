@@ -54,13 +54,13 @@ function AddEntertainmentCodeForm() {
       <form onSubmit={ postYourEntertainmentCode }>
         <div className="input-field">
           <i className="prefix fa fa-heart"></i>
-          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } />
+          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } required />
           <label htmlFor="title">Title</label>
         </div>
 
         <div className="input-field">
           <i className="prefix fa fa-link"></i>
-          <input type="text" value={ link } onChange={ e => setLink(e.target.value) } />
+          <input type="text" value={ link } onChange={ e => setLink(e.target.value) } required />
           <label htmlFor="link">Link</label>
         </div>
 
