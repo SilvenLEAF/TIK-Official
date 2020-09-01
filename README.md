@@ -6,8 +6,9 @@
 TIK is a community of coders for sharing ideas, learning together, helping each other, showcasing projects, fixing bugs, doing group projects, having hackathons and contests, algorithms and many many many more...
 
 
-## See LIVE
-https://tikofficial.herokuapp.com
+## **See Live:**
+[TIK-Official.herokuapp.com](http://tikofficial.herokuapp.com)    
+
 
 <br/><br/><br/><br/><br/>
 **DESIGNED BY:** *CEO KADASH*  
