@@ -1,10 +1,15 @@
 import '../../styles/CodeItem.scss'
 
-import React from 'react'
+import React, { useContext } from 'react'
 import moment from 'moment'
 
+import { AuthContext } from '../../contexts/AuthContext'
+
 function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
-  const role = 'ceo';
+
+  const { userData, setUserData } = useContext(AuthContext)
+
+  const role = userData.role;
 
 
   const deleteBugCodePost = async (e)=>{
@@ -29,7 +34,24 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
   }
 
 
-       
+  const ActionBtns = () => {
+    if( role === 'ceo' || role === 'cto' ){            
+      return (
+        <button className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}}>
+          Solved
+        </button>
+      )
+    }
+    else if ( userData._id === bugPost.ownerId ) {
+      return(
+        <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
+          Update
+        </button>
+      )
+    } else {
+      return null
+    }
+  }
 
   return (
     <div className="myCodeItem">
@@ -48,22 +70,17 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
 
       <div className="right-align">
         
-        {
-          role === 'ceo' ? (
-            <button className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}}>
-              Solved
-            </button>
-          ) : (
-            <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
-              Update
-            </button>
-          )
-        }
-        
+        { <ActionBtns/> }
 
-        <button className="btn waves-effect waves-light red darken-4" onClick={ deleteBugCodePost } >
-          Delete
-        </button>
+        { 
+          ( role === 'ceo' || role === 'cto' || userData._id === bugPost.ownerId ) ? (
+            <button className="btn waves-effect waves-light red darken-4" onClick={ deleteBugCodePost } >
+              Delete
+            </button>
+          ) : null
+        }       
+
+        
         
       </div>
     </div>

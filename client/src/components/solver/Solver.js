@@ -26,7 +26,12 @@ function Solver() {
   return (
     <div id="solverPage" className="container">
       <h6 className="blue-text">Bug Forest</h6>
-      <Link to="/addBug" className="blue fa fa-plus myAddBtn"></Link>
+      
+      {
+        ( userData.role !== 'ceo' && userData.role !== 'cto' ) && (
+          <Link to="/addBug" className="blue fa fa-plus myAddBtn"></Link>
+        )
+      }
 
       <div id="mySolverItemsHolder">
         {

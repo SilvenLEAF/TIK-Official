@@ -27,7 +27,12 @@ function Entertainment() {
   return (
     <div id="solverPage" className="container">
       <h6 className="blue-text">Entertainment</h6>
-      <Link to="/addEntertainment" className="blue fa fa-plus myAddBtn"></Link>
+      
+      {
+        ( userData.role === 'ceo' || userData.role === 'cto' ) && (
+          <Link to="/addEntertainment" className="blue fa fa-plus myAddBtn"></Link>
+        )
+      }
 
       <div id="myEntertainmentItemsHolder">
         {

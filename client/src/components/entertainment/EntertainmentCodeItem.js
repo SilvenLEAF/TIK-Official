@@ -2,10 +2,14 @@ import '../../styles/CodeItem.scss'
 
 import moment from 'moment'
 
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
 
 function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPosts, index }) {
-  const role = 'ceo';
+  
+  const { userData, setUserData } = useContext(AuthContext)
+
+  const role = userData.role;
 
 
   const deleteEntertainmentCodePost = async (e)=>{
@@ -30,7 +34,7 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
   }
 
 
-
+  
   return (
     <div className="myCodeItem">
       <div className="center myCodeTitle">
@@ -49,7 +53,7 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
       <div className="right-align">
         
         {
-          role === 'ceo' && (
+           ( role === 'ceo' || role === 'cto' ) && (
             <>
               <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
                 Update
