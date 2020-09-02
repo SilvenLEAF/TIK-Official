@@ -54,7 +54,7 @@ function BasicButtons() {
         </div>
         
         <div>
-          <div className="icon"></div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/contact.png') center/cover" }}  ></div>
           <button className="btn waves-effect waves-light">
             Contact
           </button>
