@@ -23,7 +23,7 @@ function Home() {
   if(!userData._id) history.push('/login')
   
   return (
-    <div id="myHomeContainer" className="container">        
+    <div id="myHomeContainer">        
       <div id="myHomeBtnsHolder">
         <div>
           <BasicButtons />

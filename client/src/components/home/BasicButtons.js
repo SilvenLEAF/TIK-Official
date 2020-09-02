@@ -3,53 +3,62 @@ import React from 'react'
 function BasicButtons() {
   return (
     <>
-      <button className="btn waves-effect waves-light blue">
+      <div>
+        <div className="icon" style={{ background: "url('/images/homeNavigation/users.png') center/cover" }}></div>
+        <button className="btn waves-effect waves-light">
           All Users
         </button>
+      </div>
 
-        <button className="btn waves-effect waves-light purple">
-          Chat Room
-        </button>
+         <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/progress.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light" >
+            Progress
+          </button>
+        </div>
 
-        <button className="btn waves-effect waves-light" style={{background: "#d00"}} >
-          Progress
-        </button>
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/learn.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light">
+            Learn
+          </button>
+        </div>
 
-        <button className="btn waves-effect waves-light green darken-4">
-          Learn
-        </button>
+        
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/contest.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light" >
+            Hackathons
+          </button>
+        </div>
 
-        <button className="btn waves-effect waves-light blue">
-          Quizzies
-        </button>
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/fatherhood.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light">
+            Help Desk
+          </button>
+        </div>
 
-        <button className="btn waves-effect waves-light purple">
-          Algorithms
-        </button>
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/ask.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light">
+            Ask
+          </button>
+        </div>
 
-        <button className="btn waves-effect waves-light" style={{background: "#d00"}} >
-          Hackathons
-        </button>
-
-        <button className="btn waves-effect waves-light green darken-4">
-          Leader Board
-        </button>
-
-        <button className="btn waves-effect waves-light blue">
-          Join Group
-        </button>
-
-        <button className="btn waves-effect waves-light purple">
-          HELP DESK
-        </button>
-
-        <button className="btn waves-effect waves-light" style={{background: "#d00"}} >
-          Ask
-        </button>
-
-        <button className="btn waves-effect waves-light green darken-4">
-          Suggest Update
-        </button>
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/suggest.png') center/cover" }} ></div>
+          <button className="btn waves-effect waves-light">
+            Suggest
+          </button>
+        </div>
+        
+        <div>
+          <div className="icon"></div>
+          <button className="btn waves-effect waves-light">
+            Contact
+          </button>
+        </div>
 
 
     </>
