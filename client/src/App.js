@@ -1,5 +1,5 @@
 // ---fake data for testing
-import Fake from './DataTESTING'
+// import Fake from './DataTESTING'
 
 import 'materialize-css/dist/css/materialize.min.css'
 
@@ -34,17 +34,17 @@ import LoginForm from './components/auth/LoginForm'
 
 function App() {
   
-  const [userData, setUserData] = useState(Fake.profileData);
-  const [allUsers, setAllUsers] = useState(Fake.allUsers);
-  const [bugPosts, setBugPosts] = useState(Fake.entertainmentData)
-  const [entertainmentPosts, setEntertainmentPosts] = useState(Fake.entertainmentData)
+  // const [userData, setUserData] = useState(Fake.profileData);
+  // const [allUsers, setAllUsers] = useState(Fake.allUsers);
+  // const [bugPosts, setBugPosts] = useState(Fake.entertainmentData)
+  // const [entertainmentPosts, setEntertainmentPosts] = useState(Fake.entertainmentData)
   
   
   
-  // const [userData, setUserData] = useState({});
-  // const [allUsers, setAllUsers] = useState([]);
-  // const [bugPosts, setBugPosts] = useState([])
-  // const [entertainmentPosts, setEntertainmentPosts] = useState([])
+  const [userData, setUserData] = useState({});
+  const [allUsers, setAllUsers] = useState([]);
+  const [bugPosts, setBugPosts] = useState([])
+  const [entertainmentPosts, setEntertainmentPosts] = useState([])
 
 
 
