@@ -10,7 +10,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 
 import BugCodeItem from '../solver/BugCodeItem';
 
-function Solver() {
+function SolvedCodes() {
   useEffect(()=>{
     M.AutoInit();
   }, [])
@@ -24,29 +24,25 @@ function Solver() {
   if(!userData._id) history.push('/login')
   
   return (
-    <div className="container solverPage">
-      <h6 className="blue-text">Pending Bugs HERE</h6>
+    <div className="solverPage container">
+      <h6 className="blue-text">Solved Bugs HERE</h6>
       
       <div className="container mySwitchContainer">
-        <Link to="/solvedCodes" className="mySolverPageSwitch"><i className="fa fa-medkit"></i> See  Solved</Link>
+        <Link to="/solver" className="mySolverPageSwitch"><i className="fa fa-bug"></i> See Pending</Link>
       </div>
-      {
-        ( userData.role !== 'ceo' && userData.role !== 'cto' ) && (
-          <Link to="/addBug" className="blue fa fa-plus myAddBtn"></Link>
-        )
-      }
+      
+      <div className="mySolverItemsHolder">
 
-      <div id="mySolverItemsHolder">
         {
-          bugPosts[0] && bugPosts.filter((item, index)=> item.solved === false).map((item, index)=>{
+          bugPosts[0] && bugPosts.filter((item, index)=> item.solved).map((item, index)=>{
             return <BugCodeItem setBugPosts={ setBugPosts } allPosts={ bugPosts} bugPost={item} index={index} key={index} />
           })
         }
 
         {
-          !bugPosts.filter((item, index)=> item.solved === false)[0] && (
+          !bugPosts.filter((item, index)=> item.solved)[0] && (
             <div className="center purple-text" style={{marginTop: "50px", fontSize: "150%" }} >
-              No Bugs for you now! Yay!!
+              Nothing solved yet! O God!!
             </div>
           )
         }
@@ -56,4 +52,4 @@ function Solver() {
   )
 }
 
-export default Solver
+export default SolvedCodes

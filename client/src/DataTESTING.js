@@ -255,7 +255,8 @@ const entertainmentData = [
     link: "https://google.com",
     ownerId: "5f47160d3f7e93271c48b865",
     ownerName: "Manash Sarma",
-    title: "O NOOO",
+    title: "NOT SOLVED",
+    solved: false,
     __v: 0,
     _id: "5f4720940fab860560428acd"
   },
@@ -265,7 +266,8 @@ const entertainmentData = [
     link: "https://google.com",
     ownerId: "5f47160d3f7e93271c48b865",
     ownerName: "Manash Sarma",
-    title: "O NOOO",
+    title: "NOT SOLVED",
+    solved: false,
     __v: 0,
     _id: "5f4720940fab860560428acd"
   },
@@ -275,7 +277,8 @@ const entertainmentData = [
     link: "https://google.com",
     ownerId: "5f47160d3f7e93271c48b865",
     ownerName: "Manash Sarma",
-    title: "O NOOO",
+    title: "NOT SOLVED",
+    solved: false,
     __v: 0,
     _id: "5f4720940fab860560428acd"
   },
@@ -285,7 +288,8 @@ const entertainmentData = [
     link: "https://google.com",
     ownerId: "5f47160d3f7e93271c48b865",
     ownerName: "Manash Sarma",
-    title: "O NOOO",
+    title: "SOLVED",
+    solved: true,
     __v: 0,
     _id: "5f4720940fab860560428acd"
   },
@@ -295,7 +299,8 @@ const entertainmentData = [
     link: "https://google.com",
     ownerId: "5f47160d3f7e93271c48b865",
     ownerName: "Manash Sarma",
-    title: "O NOOO",
+    title: "SOLVED",
+    solved: true,
     __v: 0,
     _id: "5f4720940fab860560428acd"
   }

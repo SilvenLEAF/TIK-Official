@@ -35,7 +35,7 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
 
 
   const ActionBtns = () => {
-    if( role === 'ceo' || role === 'cto' ){            
+    if( (role === 'ceo' || role === 'cto') && !bugPost.solved ){            
       return (
         <button className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}}>
           Solved

@@ -1,5 +1,32 @@
-#solverPage {
+.solverPage {
   position: relative;
+
+  h6 {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  .mySwitchContainer {
+    position: relative;
+    
+    
+    .mySolverPageSwitch{
+      position: fixed;
+      top: 80px;
+      right: 25px; 
+      color: #fff;
+      padding: 10px;
+      font-size: 130%;
+      font-weight: 600;
+  
+      z-index: 100;
+      background-color: purple;
+    }
+  
+  }
+  
+  
+
 
   .myAddBtn{    
     position: fixed;

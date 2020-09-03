@@ -14,6 +14,10 @@ const BugCodeSchema = new mongoose.Schema({
   description: {
     type: String,    
   },
+  solved: {
+    type: Boolean,
+    default: false
+  },
   ownerName: {
     type: String,
     required: true

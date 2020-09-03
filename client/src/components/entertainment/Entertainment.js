@@ -25,7 +25,7 @@ function Entertainment() {
   if(!userData._id) history.push('/login')
 
   return (
-    <div id="solverPage" className="container">
+    <div className="container solverPage">
       <h6 className="blue-text">Entertainment</h6>
       
       {
@@ -39,6 +39,14 @@ function Entertainment() {
           entertainmentPosts[0] && entertainmentPosts.map((item, index)=>{
             return <EntertainmentCodeItem setEntertainmentPosts={ setEntertainmentPosts } allPosts={ entertainmentPosts} entertainmentPost={item} index={index} key={index} />
           })
+        }
+
+        {
+          !entertainmentPosts[0] && (
+            <div className="center purple-text" style={{marginTop: "50px", fontSize: "150%" }} >
+              No Entertainment for you now
+            </div>
+          )
         }
       </div>
 
