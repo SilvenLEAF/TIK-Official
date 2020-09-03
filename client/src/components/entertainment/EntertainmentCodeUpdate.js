@@ -66,7 +66,7 @@ function EntertainmentCodeUpdate(props) {
 
         <div className="input-field">
           <i className="prefix fa fa-link"></i>
-          <input type="text" value={ link } onChange={ e => setLink(e.target.value) } required />
+          <input type="text" value={ link } onChange={ e => setLink(e.target.value) } />
           <label htmlFor="link">Link</label>
         </div>
 
