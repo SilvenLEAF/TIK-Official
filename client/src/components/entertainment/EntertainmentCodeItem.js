@@ -3,6 +3,7 @@ import '../../styles/CodeItem.scss'
 import moment from 'moment'
 
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 
 function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPosts, index }) {
@@ -55,9 +56,10 @@ function EntertainmentCodeItem({ entertainmentPost, setEntertainmentPosts, allPo
         {
            ( role === 'ceo' || role === 'cto' ) && (
             <>
-              <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
+              <Link to={ "/entertainmentCodeUpdate/" + entertainmentPost._id } className="btn waves-effect waves-light blue darken-1" style={{marginRight: "20px"}} >
                 Update
-              </button>
+              </Link>
+
               <button className="btn waves-effect waves-light red darken-4" onClick={ deleteEntertainmentCodePost } >
                 Delete
               </button>

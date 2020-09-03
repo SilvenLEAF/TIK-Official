@@ -1,5 +1,5 @@
 // ---fake data for testing
-import Fake from './DataTESTING'
+// import Fake from './DataTESTING'
 
 import 'materialize-css/dist/css/materialize.min.css'
 
@@ -34,20 +34,21 @@ import LoginForm from './components/auth/LoginForm'
 import SolvedCodes from './components/solver/SolvedCodes'
 import BugCodeUpdate from './components/solver/BugCodeUpdate'
 import BugCodeSolve from './components/solver/BugCodeSolve'
+import EntertainmentCodeUpdate from './components/entertainment/EntertainmentCodeUpdate'
 
 function App() {
   
-  const [userData, setUserData] = useState(Fake.profileData);
-  const [allUsers, setAllUsers] = useState(Fake.allUsers);
-  const [bugPosts, setBugPosts] = useState(Fake.entertainmentData)
-  const [entertainmentPosts, setEntertainmentPosts] = useState(Fake.entertainmentData)
+  // const [userData, setUserData] = useState(Fake.profileData);
+  // const [allUsers, setAllUsers] = useState(Fake.allUsers);
+  // const [bugPosts, setBugPosts] = useState(Fake.entertainmentData)
+  // const [entertainmentPosts, setEntertainmentPosts] = useState(Fake.entertainmentData)
   
   
   
-  // const [userData, setUserData] = useState({});
-  // const [allUsers, setAllUsers] = useState([]);
-  // const [bugPosts, setBugPosts] = useState([])
-  // const [entertainmentPosts, setEntertainmentPosts] = useState([])
+  const [userData, setUserData] = useState({});
+  const [allUsers, setAllUsers] = useState([]);
+  const [bugPosts, setBugPosts] = useState([])
+  const [entertainmentPosts, setEntertainmentPosts] = useState([])
 
 
 
@@ -195,6 +196,8 @@ function App() {
                     <Route path="/entertainment">
                       <Entertainment/>
                     </Route>
+
+                    <Route path="/entertainmentCodeUpdate/:entertainmentCodeId" component={ EntertainmentCodeUpdate } />
 
                     <Route path="/addEntertainment">
                       <AddEntertainmentCodeForm/>

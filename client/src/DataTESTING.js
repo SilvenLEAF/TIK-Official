@@ -7,7 +7,7 @@ const profileData = {
   about: "Hello there Mr. Stranger! Wanna know about me? Well, there's not much to say! Hah ha!! I am a human from planet earth. I love all about tech. I wanna learn and explore the unknown, create new things and change the world. Let's be friends and learn and improve together.",
   skills: "HTML5 CSS3 JavaScript",
   
-  role: "user",
+  role: "ceo",
   
   __v: 0,
   _id: "1",
