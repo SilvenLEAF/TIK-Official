@@ -60,7 +60,7 @@ function BugCodeSolve(props) {
       <form onSubmit={ updateYourBugCode }>
         <div className="input-field">
           <i className="prefix fa fa-bug"></i>
-          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } required />
+          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } />
           <label htmlFor="title">Title</label>
         </div>
 

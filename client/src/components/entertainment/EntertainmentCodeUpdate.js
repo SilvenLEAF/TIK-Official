@@ -60,7 +60,7 @@ function EntertainmentCodeUpdate(props) {
       <form onSubmit={ updateYourEntertainmentCode }>
         <div className="input-field">
           <i className="prefix fa fa-star"></i>
-          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } required />
+          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } />
           <label htmlFor="title">Title</label>
         </div>
 
@@ -73,7 +73,7 @@ function EntertainmentCodeUpdate(props) {
         <div className="input-field">
           <i className="prefix fa fa-edit"></i>
           <textarea className="materialize-textarea" value={ description } onChange={ e => setDescription(e.target.value) } />
-          <label htmlFor="title">Description</label>
+          <label htmlFor="description">Description</label>
         </div>
 
         <div className="input-field right-align">

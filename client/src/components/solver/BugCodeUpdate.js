@@ -60,7 +60,7 @@ function BugCodeUpdate(props) {
       <form onSubmit={ updateYourBugCode }>
         <div className="input-field">
           <i className="prefix fa fa-bug"></i>
-          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } required />
+          <input type="text" value={ title } onChange={ e => setTitle(e.target.value) } />
           <label htmlFor="title">Title</label>
         </div>
 
@@ -73,7 +73,7 @@ function BugCodeUpdate(props) {
         <div className="input-field">
           <i className="prefix fa fa-edit"></i>
           <textarea className="materialize-textarea" value={ description } onChange={ e => setDescription(e.target.value) } />
-          <label htmlFor="title">Description</label>
+          <label htmlFor="description">Description</label>
         </div>
 
         <div className="input-field right-align">
