@@ -1,21 +1,29 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function BasicButtons() {
   return (
     <>
-      <div>
-        <div className="icon" style={{ background: "url('/images/homeNavigation/users.png') center/cover" }}></div>
-        <button className="btn waves-effect waves-light">
-          All Users
-        </button>
-      </div>
+      <Link to="/team">
+        <div>
+          <div className="icon" style={{ background: "url('/images/homeNavigation/users.png') center/cover" }}></div>
+          <button className="btn waves-effect waves-light">
+            All Users
+          </button>
+        </div>
+      </Link>
 
-         <div>
+
+      <Link to="/progress">
+        <div>
           <div className="icon" style={{ background: "url('/images/homeNavigation/progress.png') center/cover" }} ></div>
           <button className="btn waves-effect waves-light" >
             Progress
           </button>
         </div>
+
+      </Link>        
+
 
         <div>
           <div className="icon" style={{ background: "url('/images/homeNavigation/learn.png') center/cover" }} ></div>

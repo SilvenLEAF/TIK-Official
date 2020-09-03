@@ -35,6 +35,7 @@ import SolvedCodes from './components/solver/SolvedCodes'
 import BugCodeUpdate from './components/solver/BugCodeUpdate'
 import BugCodeSolve from './components/solver/BugCodeSolve'
 import EntertainmentCodeUpdate from './components/entertainment/EntertainmentCodeUpdate'
+import Progress from './components/progress/Progress'
 
 function App() {
   
@@ -201,6 +202,11 @@ function App() {
 
                     <Route path="/addEntertainment">
                       <AddEntertainmentCodeForm/>
+                    </Route>                 
+                    
+                    
+                    <Route path="/progress">
+                      <Progress/>
                     </Route>                 
 
 
