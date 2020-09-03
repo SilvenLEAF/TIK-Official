@@ -1,7 +1,9 @@
 import '../../styles/CodeItem.scss'
 
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import moment from 'moment'
+
 
 import { AuthContext } from '../../contexts/AuthContext'
 
@@ -34,19 +36,20 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
   }
 
 
+  
   const ActionBtns = () => {
     if( (role === 'ceo' || role === 'cto') && !bugPost.solved ){            
       return (
-        <button className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}}>
-          Solved
-        </button>
+        <Link to={ "/bugCodeSolve/" + bugPost._id } className="btn waves-effect waves-light green darken-1" style={{marginRight: "20px"}} >
+          Solve
+        </Link>
       )
     }
-    else if ( userData._id === bugPost.ownerId ) {
+    else if ( (userData._id === bugPost.ownerId) && !bugPost.solved ) {
       return(
-        <button className="btn waves-effect waves-light blue" style={{marginRight: "20px"}}>
+        <Link to={ "/bugCodeUpdate/" + bugPost._id } className="btn waves-effect waves-light blue darken-1" style={{marginRight: "20px"}} >
           Update
-        </button>
+        </Link>
       )
     } else {
       return null
@@ -78,7 +81,7 @@ function BugCodeItem({ bugPost, setBugPosts, allPosts, index }) {
               Delete
             </button>
           ) : null
-        }       
+        }
 
         
         

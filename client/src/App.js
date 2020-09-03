@@ -32,6 +32,8 @@ import AddEntertainmentCodeForm from './components/entertainment/AddEntertainmen
 import SignupForm from './components/auth/SignupForm'
 import LoginForm from './components/auth/LoginForm'
 import SolvedCodes from './components/solver/SolvedCodes'
+import BugCodeUpdate from './components/solver/BugCodeUpdate'
+import BugCodeSolve from './components/solver/BugCodeSolve'
 
 function App() {
   
@@ -175,6 +177,10 @@ function App() {
                     <Route path="/addBug">
                       <AddBugCodeForm/>
                     </Route>
+
+                    <Route path="/bugCodeUpdate/:bugCodeId" component={ BugCodeUpdate } />
+                    <Route path="/bugCodeSolve/:bugCodeId" component={ BugCodeSolve } />
+                    
 
                     <Route path="/team">
                       <Team/>

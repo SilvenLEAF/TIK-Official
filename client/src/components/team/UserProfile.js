@@ -22,7 +22,6 @@ function UserProfile(props) {
   const history = useHistory();
 
 
-  console.log("PROPS", props)
   const index = props.match.params.index;  
   const friendUser = allUsers[parseInt(index)];
   

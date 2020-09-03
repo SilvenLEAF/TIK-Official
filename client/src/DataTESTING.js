@@ -7,10 +7,10 @@ const profileData = {
   about: "Hello there Mr. Stranger! Wanna know about me? Well, there's not much to say! Hah ha!! I am a human from planet earth. I love all about tech. I wanna learn and explore the unknown, create new things and change the world. Let's be friends and learn and improve together.",
   skills: "HTML5 CSS3 JavaScript",
   
-  role: "cto",
+  role: "user",
   
   __v: 0,
-  _id: "5f47160d3hf7e93271c48b865",
+  _id: "1",
   
   github: {
     _id: "5f47160d3f7e93271c48b866", 
@@ -253,7 +253,7 @@ const entertainmentData = [
     createdAt: "Thu Aug 27 2020 08:25:16 GMT+0530 (India Standard Time)",
     description: "You can list your application in the GitHub Marketplace so that other users can discover it.",
     link: "https://google.com",
-    ownerId: "5f47160d3f7e93271c48b865",
+    ownerId: "1",
     ownerName: "Manash Sarma",
     title: "NOT SOLVED",
     solved: false,
@@ -286,7 +286,7 @@ const entertainmentData = [
     createdAt: "Thu Aug 27 2020 08:25:16 GMT+0530 (India Standard Time)",
     description: "You can list your application in the GitHub Marketplace so that other users can discover it.",
     link: "https://google.com",
-    ownerId: "5f47160d3f7e93271c48b865",
+    ownerId: "1",
     ownerName: "Manash Sarma",
     title: "SOLVED",
     solved: true,
