@@ -33,3 +33,5 @@ He has coded all functionslities, handled routes, apis, database, oauth2.0, role
 <img src="TIK ORG HOME.png" />
 
 <img src="TIK ORG ALL USERS.png" />
+
+<img src="TIK ORG PROFILE.png" />
