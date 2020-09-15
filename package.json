@@ -4,7 +4,7 @@
   "description": "TIK is a community of coders for sharing ideas, learning together, helping each other, showcasing projects, fixing bugs, doing group projects, having hackathons and contests, algorithms and many many many more...",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
