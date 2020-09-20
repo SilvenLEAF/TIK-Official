@@ -37,7 +37,6 @@ require('./config/passportConfig')
 /* ---------------------------------
 .             ROUTES
 --------------------------------- */
-// ----------routes handling
 app.use(require('./routes/oauthRoutes'));
 app.use('/users', require('./routes/userRoutes'));
 app.use('/entertainmentCodes', require('./routes/EntertainmentCodeRoutes'));
