@@ -14,11 +14,11 @@ POST http://localhost:5000/bugCodes/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "title":"Googlefff",
+  "title":"Google BUG 7.0",
   "link": "https://google.com",
   "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odit eaque quos amet eum officia ut provident tenetur ducimus, laudantium unde? Doloremque excepturi, reiciendis sapiente itaque, eos porro mollitia ipsam totam quod velit quisquam officia eum sit eius pariatur nemo, ex officiis? Sequi ad sunt sapiente quam maiores quia cupiditate?",
   "ownerName": "SilvenLEAF",
-  "ownerId": "shenl0ng"
+  "ownerId": "0000000"
 }
 
 
