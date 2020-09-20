@@ -5,10 +5,10 @@ POST http://localhost:5000/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "user@gmail.com",
+  "email": "ceo@gmail.com",
   "password": "ffffff",
   "passwordCheck": "ffffff",
-  "userName": "Mr. USER"
+  "userName": "Mr. CEO"
 }
 
 
@@ -22,7 +22,7 @@ POST http://localhost:5000/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "mod@gmail.com",
+  "email": "ceo@gmail.com",
   "password": "ffffff"  
 }
 
