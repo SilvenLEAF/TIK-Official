@@ -1,3 +1,6 @@
+//ALL OAUTH KEYS HERE
+
+
 const AMAZON = {
   clientID: "amzn1.application-oa2-client.8c69d80c4d3b441e95bb0dea68412103",
   clientSecret: "0670646811fceac12bce8eb45572a9f978e80b000818f1f4cf867cfe5e9d1c27"
