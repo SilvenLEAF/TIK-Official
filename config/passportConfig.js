@@ -77,7 +77,7 @@ passport.use( new GithubStrategy(
     callbackURL: '/auth/github/callback'
   },
   (accessToken, refreshToken, profile, done)=>{
-    console.log(chalk.red(JSON.stringify(profile)));
+    //console.log(chalk.red(JSON.stringify(profile)));
     User.findOne({ 'github.githubId': profile.id }).then((existingUser)=>{
       if(existingUser){
         return done(null, existingUser)
