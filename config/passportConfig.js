@@ -38,7 +38,7 @@ passport.use( new GoogleStrategy(
     callbackURL: '/auth/google/callback'
   },
   (accessToken, refreshToken, profile, done)=>{
-    console.log(JSON.stringify(profile));
+    //console.log(JSON.stringify(profile));
     User.findOne({ 'google.googleId': profile.id, }).then((existingUser)=>{
       if(existingUser){
         return done(null, existingUser)
