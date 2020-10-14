@@ -16,6 +16,12 @@ TIK is a  community of coders for sharing ideas, learning together, helping each
 
 
 
+##Technologies
+NodeJS, ExpressJS, React, Materialize, SASS, PassportJS, oauth2.0
+
+
+
+
 ## CEO Kadash:
 He has invented the idea of TIK ORG, designed the UI of this TIK ORG. He has gathered all necessary resources like illustrations, icons, images and many more. He also gathered and gave SilvenLEAF the resources to learn React, SwiperJS, Carousels, Data representations and many many many more... 
 
