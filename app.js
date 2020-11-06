@@ -12,6 +12,9 @@ const app = express();
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+
+
+// COOKIE AND PASSPORT 
 app.use(cookieSession({
   maxAge: 24*60*60*1000,
   keys: ['orewasaikyounizettainaru']
